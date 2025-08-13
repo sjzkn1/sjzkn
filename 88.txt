@@ -185,7 +185,7 @@
       "filterable": 1
     },
     {
-      "key": "19",
+      "key": "21",
       "name": "虎牙资源",
       "type": 1,
       "api": "https://www.huyaapi.com/api.php/provide/vod/at/json",
