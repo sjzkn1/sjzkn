@@ -191,15 +191,7 @@
       "api": "https://www.huyaapi.com/api.php/provide/vod/at/json",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1,
-      "categories": [
-        "首页",
-        "电视剧",
-        "电影",
-        "短剧",
-        "综艺",
-        "动漫"
-      ]
+      "filterable": 1
     }
   ],
   "lives": [
