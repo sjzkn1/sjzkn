@@ -41,15 +41,6 @@
       ]
     },
     {
-      "key": "5",
-      "name": "卧龙资源站",
-      "type": 1,
-      "api": "https://collect.wolongzy.cc/api.php/provide/vod/?ac=list",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
       "key": "1",
       "name": "茅台资源",
       "type": 1,
@@ -189,6 +180,15 @@
       "name": "虎牙资源",
       "type": 1,
       "api": "https://www.huyaapi.com/api.php/provide/vod/at/json",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "5",
+      "name": "靳先生，长期维护",
+      "type": 1,
+      "api": "https://collect.wolongzy.cc/api.php/provide/vod/?ac=list",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
