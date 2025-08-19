@@ -86,15 +86,6 @@
       "filterable": 1
     },
     {
-      "key": "14",
-      "name": "极速资源",
-      "type": 1,
-      "api": "https://jszyapi.com/api.php/provide/vod/at/json",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
       "key": "2",
       "name": "牛牛资源",
       "type": 0,
@@ -117,15 +108,6 @@
       "name": "索尼资源",
       "type": 1,
       "api": "https://suoniapi.com/api.php/provide/vod/?ac=list",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "10",
-      "name": "极速资源",
-      "type": 1,
-      "api": "https://jszyapi.com/api.php/provide/vod/from/jsyun/at/json",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -162,15 +144,6 @@
       "name": "光速资源",
       "type": 1,
       "api": "https://api.guangsuapi.com/api.php/provide/vod/josn",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "20",
-      "name": "红牛资源",
-      "type": 1,
-      "api": https://jszyapi.com/api.php/provide/vod/from/jsyun/at/json",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -448,4 +421,3 @@
     "cms.qdwght.com"
   ]
 }
-
