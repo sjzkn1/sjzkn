@@ -125,7 +125,7 @@
       "key": "10",
       "name": "极速资源",
       "type": 1,
-      "api": "https://jszyapi.com/api.php/provide/vod/at/json",
+      "api": "https://jszyapi.com/api.php/provide/vod/from/jsyun/at/json",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -170,7 +170,7 @@
       "key": "20",
       "name": "红牛资源",
       "type": 1,
-      "api": "https://www.hongniuzy2.com/api.php/provide/vod/at/josn/",
+      "api": https://jszyapi.com/api.php/provide/vod/from/jsyun/at/json",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -448,3 +448,4 @@
     "cms.qdwght.com"
   ]
 }
+
