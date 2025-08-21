@@ -47,7 +47,28 @@
       "api": "https://caiji.maotaizy.cc/api.php/provide/vod/at/josn",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "categories": [
+        "短剧大全",
+        "穿越现代",
+        "重生民国",
+        "反转爽剧",
+        "现代都市",
+        "古装仙侠",
+        "言情总裁",
+        "悬疑烧脑",
+        "国产剧",
+        "香港剧",
+        "大陆综艺",
+        "动作片",
+        "爱情片",
+        "喜剧片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "演唱会"
+      ]
     },
     {
       "key": "19",
@@ -56,7 +77,24 @@
       "api": "https://api.wujinapi.me/api.php/provide/vod/?ac=list",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "categories": [
+        "年代穿越",
+        "脑洞悬疑",
+        "古装仙侠",
+        "现代都市",
+        "女频恋爱",
+        "反转爽剧",
+        "有声动漫",
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "战争片",
+        "国产剧",
+        "香港剧"
+      ]
     },
     {
       "key": "6",
@@ -65,7 +103,14 @@
       "api": "https://taopianapi.com/cjapi/dm/vod/xml.html",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "categories": [
+        "电视剧/国产剧",
+        "电视剧/香港剧",
+        "电影/动作片",
+        "电影/喜剧片",
+        "电影/悬疑片"
+      ]
     },
     {
       "key": "12",
@@ -83,7 +128,19 @@
       "api": "https://jyzyapi.com/provide/vod/from/jinyingyun/at/json",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "categories": [
+        "短剧",
+        "内地剧",
+        "香港剧",
+        "动作片",
+        "喜剧片",
+        "恐怖片",
+        "科幻片",
+        "剧情片",
+        "战争片",
+        "爱情片"
+      ]
     },
     {
       "key": "2",
@@ -92,7 +149,25 @@
       "api": "https://api.niuniuzy.me/api.php/provide/vod/from/nnm3u8/at/xml",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "categories": [
+        "现代都市",
+        "年代穿越",
+        "古装仙侠",
+        "脑洞悬疑",
+        "女频恋爱",
+        "反转爽剧",
+        "国产剧",
+        "港剧",
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "动画片"
+      ]
     },
     {
       "key": "3",
@@ -101,7 +176,22 @@
       "api": "https://mozhuazy.com/api.php/provide/vod/at/xml",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "categories": [
+        "短剧",
+        "国产剧",
+        "香港剧",
+        "台湾剧",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "战争片",
+        "剧情片",
+        "悬疑片",
+        "动画片",
+        "大陆综艺"
+      ]
     },
     {
       "key": "9",
@@ -110,7 +200,28 @@
       "api": "https://suoniapi.com/api.php/provide/vod/?ac=list",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "categories": [
+        "古装仙侠",
+        "年代穿越",
+        "脑洞悬疑",
+        "现代都市",
+        "反转爽剧",
+        "女频恋爱",
+        "4k电影",
+        "国产剧",
+        "港剧",
+        "韩剧",
+        "台剧",
+        "动作片",
+        "喜剧片",
+        "科幻片",
+        "恐怖片",
+        "爱情片",
+        "战争片",
+        "大陆综艺",
+        "港台综艺"
+      ]
     },
     {
       "key": "11",
@@ -119,16 +230,27 @@
       "api": " https://bfzyapi.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "15",
-      "name": "速播资源",
-      "type": 1,
-      "api": "https://subocj.com/api.php/provide/vod/at/json",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "categories": [
+        "重生民国",
+        "年代穿越",
+        "现代言情",
+        "反转爽文",
+        "女恋总裁",
+        "闪婚离婚",
+        "都市脑洞",
+        "古装仙侠",
+        "国产剧",
+        "香港剧",
+        "韩国剧",
+        "台湾剧",
+        "动作片",
+        "喜剧片",
+        "恐怖片",
+        "科幻片",
+        "爱情片",
+        "战争片"
+      ]
     },
     {
       "key": "16",
