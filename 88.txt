@@ -317,9 +317,9 @@
     },
     {
       "key": "5",
-      "name": "靳先生，长期维护",
+      "name": "靳先生，长期维护  豆瓣",
       "type": 1,
-      "api": "https://collect.wolongzy.cc/api.php/provide/vod/?ac=list",
+      "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/josn",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
