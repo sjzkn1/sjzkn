@@ -259,7 +259,18 @@
       "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/josn",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "categories": [
+        "短剧",
+        "大陆剧",
+        "港澳剧",
+        "动作片",
+        "爱情片",
+        "科幻片",
+        "战争片",
+        "恐怖片",
+        "喜剧片"
+      ]
     },
     {
       "key": "17",
@@ -268,7 +279,20 @@
       "api": "https://api.guangsuapi.com/api.php/provide/vod/josn",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "categories": [
+        "短剧",
+        "大陆剧",
+        "港澳剧",
+        "台湾剧",
+        "韩剧",
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "战争片"
+      ]
     },
     {
       "key": "21",
@@ -277,7 +301,19 @@
       "api": "https://www.huyaapi.com/api.php/provide/vod/at/json",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "categories": [
+        "短剧",
+        "内地剧",
+        "香港剧",
+        "韩剧",
+        "动作片",
+        "喜剧片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "爱情片"
+      ]
     },
     {
       "key": "5",
