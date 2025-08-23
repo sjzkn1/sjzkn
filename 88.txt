@@ -1,13 +1,5 @@
 {
-    "spider": "./svip.jar",
-    "sites": 
-    {
-            "key": "豆瓣",
-            "name": "🔥拾光｜本地",
-            "type": 3,
-            "api": "csp_Douban",
-            "searchable": 0
-    }
+  "sites": [
     {
       "key": "88",
       "name": "👨‍🎤靳先生┃长期维护",
@@ -587,6 +579,3 @@
     "cms.qdwght.com"
   ]
 }
-
-
-
