@@ -347,7 +347,25 @@
       ]
     },
     {
-      "key": "16",
+      "key": "yinghua",
+      "name": "樱花资源",
+      "type": 1,
+      "api": "https://m3u8.apiyhzy.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "baidu",
+      "name": "百度资源",
+      "type": 1,
+      "api": "https://api.apibdzy.com/api.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "jin",
       "name": "靳先生，长期维护 ",
       "type": 1,
       "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/jos",
