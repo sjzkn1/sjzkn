@@ -29,6 +29,37 @@
       ]
     },
     {
+      "key": "5",
+      "name": "豆瓣资源",
+      "type": 1,
+      "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/josn",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "categories": [
+        "短剧大全",
+        "重生民国",
+        "穿越现代",
+        "反转爽剧",
+        "言情总裁",
+        "现代都市",
+        "古装仙侠",
+        "悬疑烧脑",
+        "大陆综艺",
+        "港台综艺",
+        "国产剧",
+        "香港剧",
+        "台湾剧",
+        "韩剧",
+        "动作片",
+        "爱情片",
+        "喜剧片",
+        "科幻片",
+        "恐怖片",
+        "剧情片"
+      ]
+    },
+    {
       "key": "4",
       "name": "旺旺资源",
       "type": 1,
@@ -316,10 +347,10 @@
       ]
     },
     {
-      "key": "5",
-      "name": "靳先生，长期维护  豆瓣",
+      "key": "16",
+      "name": "靳先生，长期维护 ",
       "type": 1,
-      "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/josn",
+      "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/jos",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
