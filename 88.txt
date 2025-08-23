@@ -3,7 +3,7 @@
    {
       "key": "豆瓣",
       "name": "请24小时内删除",
-      "type": 3,
+      "type": 16,
       "api": "csp_Douban",
       "searchable": 0,
       "changeable": 1
@@ -587,4 +587,5 @@
     "cms.qdwght.com"
   ]
 }
+
 
