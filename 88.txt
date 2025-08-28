@@ -144,15 +144,6 @@
       ]
     },
     {
-      "key": "12",
-      "name": "豪华云资源",
-      "type": 1,
-      "api": "https://hhzyapi.com/api.php/provide/vod/at/json",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
       "key": "18",
       "name": "金鹰资源",
       "type": 1,
