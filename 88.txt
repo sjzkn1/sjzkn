@@ -144,27 +144,6 @@
       ]
     },
     {
-      "key": "18",
-      "name": "金鹰资源",
-      "type": 1,
-      "api": "https://jyzyapi.com/provide/vod/from/jinyingyun/at/json",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "categories": [
-        "短剧",
-        "内地剧",
-        "香港剧",
-        "动作片",
-        "喜剧片",
-        "恐怖片",
-        "科幻片",
-        "剧情片",
-        "战争片",
-        "爱情片"
-      ]
-    },
-    {
       "key": "2",
       "name": "牛牛资源",
       "type": 0,
@@ -292,28 +271,6 @@
         "战争片",
         "恐怖片",
         "喜剧片"
-      ]
-    },
-    {
-      "key": "17",
-      "name": "光速资源",
-      "type": 1,
-      "api": "https://api.guangsuapi.com/api.php/provide/vod/josn",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "categories": [
-        "短剧",
-        "大陆剧",
-        "港澳剧",
-        "台湾剧",
-        "韩剧",
-        "动作片",
-        "喜剧片",
-        "爱情片",
-        "科幻片",
-        "恐怖片",
-        "战争片"
       ]
     },
     {
