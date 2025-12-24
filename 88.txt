@@ -60,7 +60,6 @@
       ]
     },
     {
-      "key": "4",
       "name": "优质资源站",
       "type": 1,
       "api": "https://api.yzzy-api.com/inc/apijson.php?ac=list",
@@ -603,4 +602,5 @@
     "cms.qdwght.com"
   ]
 }
+
 
