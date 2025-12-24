@@ -61,6 +61,37 @@
     },
     {
       "key": "4",
+      "name": "优质资源站",
+      "type": 1,
+      "api": "https://api.yzzy-api.com/inc/apijson.php?ac=list",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "categories": [
+        "短剧大全",
+        "重生民国",
+        "穿越现代",
+        "反转爽剧",
+        "言情总裁",
+        "现代都市",
+        "古装仙侠",
+        "悬疑烧脑",
+        "大陆综艺",
+        "港台综艺",
+        "国产剧",
+        "香港剧",
+        "台湾剧",
+        "韩剧",
+        "动作片",
+        "爱情片",
+        "喜剧片",
+        "科幻片",
+        "恐怖片",
+        "剧情片"
+      ]
+    },
+    {
+      "key": "4",
       "name": "旺旺资源",
       "type": 1,
       "api": "https://ww.tyyszy5.com/api.php/provide/vod/?ac=lis",
@@ -572,3 +603,4 @@
     "cms.qdwght.com"
   ]
 }
+
