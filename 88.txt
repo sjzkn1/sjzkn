@@ -60,9 +60,9 @@
       ]
     },
     {
-      "name": "优质资源站",
+      "name": "光速资源",
       "type": 1,
-      "api": "https://api.yzzy-api.com/inc/apijson.php?ac=list",
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/at/josn",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -582,6 +582,7 @@
     "cms.qdwght.com"
   ]
 }
+
 
 
 
