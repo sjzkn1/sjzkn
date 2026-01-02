@@ -2,7 +2,7 @@
   "sites": [
     {
       "key": "88",
-      "name": "👨‍🎤靳先生┃长期维护",
+      "name": "👨‍🎤靳┃长期维护",
       "type": 1,
       "api": "https://cj.yayazy.net/api.php/provide/vod/?ac=list",
       "searchable": 1,
@@ -572,6 +572,7 @@
     "cms.qdwght.com"
   ]
 }
+
 
 
 
