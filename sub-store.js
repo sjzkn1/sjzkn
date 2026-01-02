@@ -50,7 +50,7 @@ const nx = inArg.nx || false,
   blnx = inArg.blnx || false,
   numone = inArg.one || false,
   debug = inArg.debug || false,
-*  clear = inArg.clear || false,
+  clear = inArg.clear || false,
   addflag = inArg.flag || false,
   nm = inArg.nm || false;
 
@@ -82,7 +82,7 @@ const specialRegex = [
   /(\d\.)?\d+×/,
   /IPLC|IEPL|Kern|Edge|Pro|Std|Exp|Biz|Fam|Game|Buy|Zx|LB|Game/,
 ];
-*const nameclear =
+const nameclear =
   /(套餐|到期|有效|剩余|版本|已用|过期|失联|测试|官方|网址|备用|群|TEST|客服|网站|获取|订阅|流量|机场|下次|官址|联系|邮箱|工单|学术|USE|USED|TOTAL|EXPIRE|EMAIL)/i;
 // prettier-ignore
 const regexArray=[/ˣ²/, /ˣ³/, /ˣ⁴/, /ˣ⁵/, /ˣ⁶/, /ˣ⁷/, /ˣ⁸/, /ˣ⁹/, /ˣ¹⁰/, /ˣ²⁰/, /ˣ³⁰/, /ˣ⁴⁰/, /ˣ⁵⁰/, /IPLC/i, /IEPL/i, /核心/, /边缘/, /高级/, /标准/, /实验/, /商宽/, /家宽/, /游戏|game/i, /购物/, /专线/, /LB/, /cloudflare/i, /\budp\b/i, /\bgpt\b/i,/udpn\b/];
@@ -155,7 +155,7 @@ function operator(pro) {
     });
   });
 
-*  if (clear || nx || blnx || key) {
+  if (clear || nx || blnx || key) {
     pro = pro.filter((res) => {
       const resname = res.name;
       const shouldKeep =
@@ -201,7 +201,7 @@ function operator(pro) {
     });
     if (blockquic == "on") {
       e["block-quic"] = "on";
-    } else if (blockquic == "on") {
+    } else if (blockquic == "off") {
       e["block-quic"] = "off";
     } else {
       delete e["block-quic"];
