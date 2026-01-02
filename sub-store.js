@@ -201,7 +201,7 @@ function operator(pro) {
     });
     if (blockquic == "on") {
       e["block-quic"] = "on";
-    } else if (blockquic == "off") {
+    } else if (blockquic == "on") {
       e["block-quic"] = "off";
     } else {
       delete e["block-quic"];
