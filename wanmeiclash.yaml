@@ -7,7 +7,7 @@
 proxy-providers:
 
   N和1:
-    url: "https://jciwtzfecszi.ap-southeast-1.clawcloudrun.com/jinzibo/download/collection/%E5%A4%9A%E5%90%88%E4%B8%80"
+    url: "https://xhyc.sjzkn.us.ci/AKg2abstVnOeRpm1aB4G/download/collection/%E5%A4%9A%E5%90%88%E4%B8%80"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
     proxy: 直连 
     
   公益节点:
-    url: "https://jciwtzfecszi.ap-southeast-1.clawcloudrun.com/jinzibo/download/collection/%E5%85%8D%E8%B4%B9%E6%9C%BA%E5%9C%BA"
+    url: "https://xhyc.sjzkn.us.ci/AKg2abstVnOeRpm1aB4G/download/collection/%E5%85%8D%E8%B4%B9%E6%9C%BA%E5%9C%BA"
     type: http
     interval: 86400
     health-check:
@@ -227,6 +227,7 @@ rule-providers:
   Google / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"}  
   Google / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"}
 # GateFireWall / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/gfw.mrs"}
+
 
 
 
