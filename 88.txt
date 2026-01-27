@@ -691,8 +691,45 @@
             "ua": "okhttp",
             "url": "https://188.sjzkn1.tk/99.txt"
         },
-       ]
-  }
+        {
+            "name": "🦄4gTV(梯子台湾节点)",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "http://4gtv.iill.top/4gtv.m3u"
+        },
+        {
+            "name": "🦄jackTV(梯子)",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://php.946985.filegear-sg.me/jackTV.m3u"
+        },
+        {
+            "name": "🦄litv直播(梯子台湾节点)",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "http://ezc.xtvantsc.xyz/litv.php"
+        },
+        {
+            "name": "🦄台湾TV(梯子台湾节点)",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/台湾TV"
+        }, 
+        {
+			"name": "🦄YouTube直播(梯子)",
+			"type": 0,
+            "ua": "okhttp",
+            "url": "https://down.nigx.cn/raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/youtube.m3u"
+		},
+        {
+            "name": "🦄港台大陆频道无18",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/港台大陆无18内容"
+        }
+    ]
+}
+
 
 
 
