@@ -689,7 +689,7 @@
             "name": "🦄地方直播",
             "type": 0,
             "ua": "okhttp",
-            "url": "https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt"
+            "url": "https://188.sjzkn1.tk/99.txt"
         }, 
         {
             "name": "🦄AnboxTV斯玛特",
@@ -729,6 +729,7 @@
         }
     ]
   }
+
 
 
 
