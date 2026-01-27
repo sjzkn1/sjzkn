@@ -308,66 +308,6 @@
         "台湾剧"
       ]
     },
-{"name":"🦄豪堪短剧🎦｜短剧","key":"豪堪短剧","type":3,"api":"csp_HHkkAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
-{"name":"🦄盒马短剧📺｜短剧","key":"盒马短剧","type":3,"api":"csp_HemaAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
-{"name":"🦄锦鲤短剧🐠｜短剧","key":"锦鲤短剧","type":3,"api":"csp_JLdjAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
-{"name":"🦄喵喵短剧🐱｜短剧","key":"喵喵短剧","type":3,"api":"csp_QmdjAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
-{"name":"🦄星星短剧⭐｜短剧","key":"星星短剧","type":3,"api":"csp_XydjAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
-            {"key": "csp_Kugou",
-"name": "🦄酷狗音乐｜音乐",
-"type": 3,
-"api": "csp_Kugou",
-"jar": "https://gitee.com/tianwikeji/jar/raw/master/Yoursmile.jar",
-"playerType": 2,
-"ext": {"classes": [{"type_name": "酷狗",
-"type_id": "kugou"}]}}, 
-    {
-			"key": "网易云音乐",
-			"name": "🦄网易云｜音乐",
-			"type": 3,
-			"api": "https://xn--fjq53n.xyz/Ting/yinyue/网易云音乐.py"
-		},
-		{
-			"key": "网易云音乐1",
-			"name": "🦄网易云1｜音乐",
-			"type": 3,
-			"api": "https://xn--fjq53n.xyz/Ting/yinyue/网易云音乐1.py"
-		},
-        {
-             "key": "hipy_js_酷我听书[听]",
-             "name": "🦄酷我听书｜听书",
-              "type": 3,
-              "api": "https://gitee.com/abiubiud/xxs/raw/main/lib/drpy2.min.js",
-              "searchable": 1,
-              "quickSearch": 1,
-              "filterable": 1,
-              "ext": "https://gitee.com/abiubiud/xxs/raw/main/dr2/酷我听书[听].js"
-        },
-        {
-              "key": "hipy_js_爱上你听书",
-              "name": "🦄爱上听书｜听书",
-              "type": 3,
-              "api": "https://gitee.com/abiubiud/xxs/raw/main/lib/drpy2.min.js",
-              "searchable": 1,
-              "quickSearch": 1,
-              "ext": "https://gitee.com/abiubiud/xxs/raw/main/dr2/爱上你听书网[听].js"
-        },
-        {
-			"key": "py_动漫巴士",
-			"name": "🦄动漫巴士｜动漫",
-			"type": 4,
-			"api": "https://py.doube.eu.org/v2/spider?site=6b5899d243816bacb8712de7ab6ceb89"
-		},
-        {
-			"key": "market",
-			"name": "🦄OK影视应用更新",
-			"type": 3,
-			"api": "csp_Market",
-			"searchable": 0,
-			"changeable": 0,
-			"ext": "https://down.nigx.cn/raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz/market.json",
-			"jar": "https://down.nigx.cn/raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz/fm.jar"
-		}
     {
       "key": "jin",
       "name": "靳先生，长期维护 ",
@@ -683,6 +623,7 @@
         }
     ]
 }
+
 
 
 
