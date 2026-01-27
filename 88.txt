@@ -695,10 +695,11 @@
             "name": "🦄港台大陆频道",
             "type": 0,
             "ua": "okhttp",
-            "url": "https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/港台大陆"
+            "url": "https://188.sjzkn1.tk/itv.txt"
         }
     ]
 }
+
 
 
 
