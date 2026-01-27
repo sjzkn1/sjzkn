@@ -30,7 +30,7 @@
     },
      {
             "key": "还行",
-            "name": "🦄还行4K｜追剧",
+            "name": "🦄还行4K",
             "jar": "https://xiuxiu-pro.meitudata.com/posters/5199d8f8bcbe3c6d6938ded33cb90596.png",
             "type": 3,
             "api": "csp_AppYs",
@@ -40,7 +40,7 @@
         },
        {
       "key": "量子2k",
-      "name": "🦄量子影视｜追剧",
+      "name": "🦄量子影视",
       "type": 1,
       "api": "http://cj.lziapi.com/api.php/provide/vod/",
       "searchable": 1,
@@ -66,7 +66,7 @@
       },
               {    
             "key": "热播影视",
-            "name": "🦄热播影视｜追剧",
+            "name": "🦄热播影视",
             "type": 3,
             "jar":"https://gitee.com/nm_nm/interface/raw/master/spider.jar;md5;06094f7f426755b6dd338459069a4e95",             "api": "csp_AppRJ",
             "searchable": 1,
@@ -78,7 +78,7 @@
         },
          {
             "key":"瓜子",
-            "name":"🦄瓜子影视｜追剧",
+            "name":"🦄瓜子影视",
             "type":3,
             "api":"csp_Guazi",
             "searchable":1,
@@ -90,7 +90,7 @@
          },
          {
             "key": "API_如意",
-            "name": "🦄如意影视｜追剧",
+            "name": "🦄如意影视",
             "type": 1,
             "api": "https://cj.rycjapi.com/api.php/provide/vod",
             "ext": "",
@@ -414,11 +414,11 @@
         "台湾剧"
       ]
     },
-{"name":"🦄豪堪短剧🎦｜短剧","key":"豪堪短剧","type":3,"api":"csp_HHkkAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
-{"name":"🦄盒马短剧📺｜短剧","key":"盒马短剧","type":3,"api":"csp_HemaAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
-{"name":"🦄锦鲤短剧🐠｜短剧","key":"锦鲤短剧","type":3,"api":"csp_JLdjAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
-{"name":"🦄喵喵短剧🐱｜短剧","key":"喵喵短剧","type":3,"api":"csp_QmdjAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
-{"name":"🦄星星短剧⭐｜短剧","key":"星星短剧","type":3,"api":"csp_XydjAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
+{"name":"🦄豪堪短剧","key":"豪堪短剧","type":3,"api":"csp_HHkkAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
+{"name":"🦄盒马短剧","key":"盒马短剧","type":3,"api":"csp_HemaAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
+{"name":"🦄锦鲤短剧","key":"锦鲤短剧","type":3,"api":"csp_JLdjAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
+{"name":"🦄喵喵短剧","key":"喵喵短剧","type":3,"api":"csp_QmdjAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
+{"name":"🦄星星短剧","key":"星星短剧","type":3,"api":"csp_XydjAmns","searchable":1,"filterable":1,"quickSearch":1,"changeable":1,"jar":"https://jihulab.com/yoursmile2/TVBox/-/raw/main/custom_spider.jar"},
    {
       "key": "jin",
       "name": "靳先生，长期维护 ",
@@ -690,45 +690,10 @@
             "type": 0,
             "ua": "okhttp",
             "url": "https://188.sjzkn1.tk/99.txt"
-        }, 
-        {
-            "name": "🦄AnboxTV斯玛特",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://tv.anboxtv.online/tv"
         },
-        {
-            "name": "🦄4gTV(梯子台湾节点)",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "http://4gtv.iill.top/4gtv.m3u"
-        },
-        {
-            "name": "🦄jackTV(梯子)",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://php.946985.filegear-sg.me/jackTV.m3u"
-        },
-        {
-            "name": "🦄litv直播(梯子台湾节点)",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "http://ezc.xtvantsc.xyz/litv.php"
-        },
-        {
-            "name": "🦄台湾TV(梯子台湾节点)",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/台湾TV"
-        }, 
-        {
-            "name": "🦄港台大陆频道",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://raw.githubusercontent.com/FGBLH/FG/refs/heads/main/港台大陆"
-        }
-    ]
+       ]
   }
+
 
 
 
