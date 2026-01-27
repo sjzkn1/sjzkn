@@ -419,6 +419,7 @@
         "台湾剧"
       ]
     },
+{
 {"key": "csp_Kugou",
 "name": "🦄酷狗音乐｜音乐",
 "type": 3,
@@ -474,7 +475,6 @@
 			"ext": "https://down.nigx.cn/raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz/market.json",
 			"jar": "https://down.nigx.cn/raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz/fm.jar"
 		}
-        ],
     {
       "key": "jin",
       "name": "靳先生，长期维护 ",
@@ -739,6 +739,7 @@
     "cms.qdwght.com"
   ]
   }
+
 
 
 
