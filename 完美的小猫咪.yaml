@@ -7,7 +7,7 @@
 proxy-providers:
 
   N和1:
-    url: "http://jia1.jiaguwei.tk:3001/CKg2abstVnOeRpm1aB4G/download/collection/N%E5%92%8C1"
+    url: "http://jia1.jiaguwei.tk:3001/CKg2abstVnOeRpm1aB4G/download/%E8%87%AA%E5%B7%B1BOOS%E4%BB%A3%E7%90%86%E8%8A%82%E7%82%B9"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
     proxy: 直连 
     
   公益节点:
-    url: "http://jia1.jiaguwei.tk:3001/CKg2abstVnOeRpm1aB4G/download/collection/%E5%85%8D%E8%B4%B9%E5%85%AC%E7%9B%8A%E5%90%88%E5%90%88%E4%B8%80"
+    url: "123"
     type: http
     interval: 86400
     health-check:
