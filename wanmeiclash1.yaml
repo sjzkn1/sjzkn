@@ -1,0 +1,233 @@
+# ========================
+# Clash-ALL 优化配置
+# ========================
+
+# 机场节点订阅
+proxy-providers:
+  N和1:
+    url: "http://jia1.jiaguwei.tk:3001/CKg2abstVnOeRpm1aB4G/download/collection/%E5%A4%9A%E5%90%88%E4%B8%80"
+    type: http
+    interval: 864000 # 优化：修改为每天更新一次 (原 864000 间隔太长)
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 1200
+    proxy: 直连 
+    
+  公益节点:
+    url: "https://xhyc.sjzkn.us.ci/CKg2abstVnOeRpm1aB4G/download/collection/%E5%85%8D%E8%B4%B9%E6%9C%BA%E5%9C%BA"
+    type: http
+    interval: 864000 # 优化：修改为每天更新一次
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 1200
+    proxy: 直连    
+
+proxies:
+  - {name: 直连, type: direct}
+  - {name: 拒绝, type: reject}
+
+# ========================
+# 主要端口设置
+# ========================
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true # 优化：将游离的 ipv6 统一放在全局设置中
+
+external-controller: 0.0.0.0:9090
+external-ui: ui
+external-ui-name: zashboard
+external-ui-url: https://gh-proxy.com/github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip
+secret: "123456"
+
+# ========================
+# DNS 设置
+# ========================
+dns:
+  enable: true
+  listen: 0.0.0.0:7874
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16 # 优化：使用规范的 198.18 虚拟网段
+  nameserver:
+    - 192.168.3.1
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - +.lan
+    - +.local
+    - geosite:cn
+    # 修复：原配置在此处断裂，现已将这些域名正确归入 filter 列表
+    - +.ynhtbank.com
+    - +.qeayr.cn
+    - +.saojc.xyz   
+    - +.sssyun.xyz
+    - +.dler.cloud
+    - +.0tk8a3a1q4t94dler.com    
+    - +.aerianas.top
+    - +.gptacg.top
+    - +.wxda.net
+
+# ========================
+# TUN 模块
+# ========================
+tun:
+  enable: true
+  stack: gvisor
+  device: utun
+  endpoint-independent-nat: true
+  auto-route: true # 优化：开启自动路由，否则 TUN 无法接管流量
+  auto-detect-interface: true # 优化：自动检测接口
+  auto-redirect: false
+  strict-route: true # 优化：开启严格路由防止泄漏
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+# ========================
+# 策略组定义
+# ========================
+default: &default
+  type: select
+  proxies:
+    - 所有-自动
+    - 所有-手动
+    - 直连
+    - 其他-故转
+    - 拒绝
+
+proxy-groups:
+  # 其他组
+  - name: 其他-故转
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 其他-手动
+      - 其他-自动
+  - name: 其他-手动
+    type: select
+    include-all: true
+    filter: "^((?!(直连|拒绝)).)*$"
+  - name: 其他-自动
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "^((?!(直连|拒绝)).)*$"
+
+  # 业务分流组
+  - name: 所有-故转
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 所有-手动
+      - 所有-自动
+  - name: 所有-手动
+    type: select
+    include-all: true
+    filter: "^((?!(直连|拒绝)).)*$"
+  - name: 所有-自动
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "^((?!(直连|拒绝)).)*$"
+
+  # ==== 修改项：独立定义 电报 和 推特 组，实现节点自由选择 ====
+  - name: 电报
+    type: select
+    include-all: true # 该参数将直接拉取所有机场节点供你点选
+    proxies:
+      - 所有-自动
+      - 所有-手动
+      - 直连
+  - name: 推特
+    type: select
+    include-all: true
+    proxies:
+      - 所有-自动
+      - 所有-手动
+      - 直连
+
+  # 其他应用继续使用默认锚点
+  - {name: 人工智能, <<: *default}
+  - {name: GitHub, <<: *default}
+  - {name: 油管, <<: *default}
+  - {name: 谷歌, <<: *default}
+  - {name: 网络测速, <<: *default}
+  - {name: 广告拦截, <<: *default}
+  - {name: 国外, <<: *default}
+  - {name: 国内, <<: *default}
+  - {name: 其他, <<: *default}
+
+# ========================
+# 规则引擎（rules）
+# ========================
+rules:
+  - RULE-SET,TEST / Domain,网络测速
+  - RULE-SET,广告拦截 / Domain,广告拦截  
+  - RULE-SET,人工智能 / Domain,人工智能
+  - RULE-SET,GitHub / Domain,GitHub
+  - RULE-SET,电报 / Domain,电报
+  - RULE-SET,电报 / IP,电报,no-resolve
+  - RULE-SET,推特 / Domain,推特
+  - RULE-SET,油管 / Domain,油管
+  - RULE-SET,谷歌 / Domain,谷歌
+  - RULE-SET,谷歌 / IP,谷歌,no-resolve
+  - RULE-SET,Proxy / Domain,国外
+  - RULE-SET,Globe / Domain,国外  
+  - RULE-SET,Direct / Domain,国内
+  - RULE-SET,China / Domain,国内
+  - RULE-SET,China / IP,国内,no-resolve
+  - RULE-SET,Private / Domain,国内
+  - MATCH,其他
+
+# ========================
+# 规则集提供者
+# ========================
+rule-anchor:
+  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
+  domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
+  class: &class {type: http, interval: 86400, behavior: classical, format: text}
+
+rule-providers:
+  TEST / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Check.list"}
+  人工智能 / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
+  Copilot / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Copilot.list"}
+  Gemini / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Gemini.list"}
+  GitHub / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/github.mrs"}
+  电报 / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/telegram.mrs"}  
+  电报 / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/telegram.mrs"}
+  推特 / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/x.mrs"}
+  OKX / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/okx.mrs"}
+  Bybit / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bybit.mrs"}
+  Binance / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/binance.mrs"}
+  Epic / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list"}
+  EA / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EA/EA.list"}
+  Blizzard / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Blizzard/Blizzard.list"}
+  UBI / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/UBI/UBI.list"}
+  PlayStation / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PlayStation/PlayStation.list"}
+  Nintend / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.list"}
+  Proxy / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Proxy.list"}
+  Globe / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list"} 
+  Direct / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Direct.list"}
+  China / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs"}
+  China / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.mrs"}
+  Private / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/private.mrs"}
+  广告拦截 / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Block.list"}
+  Nvidia / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Nvidia/Nvidia.list"}
+  Crunchyroll / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Crunchyroll.list"}
+  Reddit / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/reddit.mrs"}
+  油管 / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs"}  
+  谷歌 / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"}  
+  谷歌 / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"}
