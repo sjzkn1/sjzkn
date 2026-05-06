@@ -63,7 +63,7 @@
       "key": "4",
       "name": "旺旺资源",
       "type": 1,
-      "api": "https://ww.tyyszy5.com/api.php/provide/vod/?ac=lis",
+      "api": "https://ww.tyyszy5.com/api.php/provide/vod/at/xml/?ac=list",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
