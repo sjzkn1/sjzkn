@@ -1,5 +1,7 @@
 # ========================
-# Clash-ALL 优化配置（广告加强 + 启动修复版）
+# Clash-ALL 优化配置（稳定修复版）
+# 适用：玩客云、ARMv7 及低功耗 OpenWrt 设备
+# 修改点：修复 MTU、切换系统堆栈、优化 DNS 稳定性
 # ========================
 
 # ========================
@@ -9,7 +11,7 @@ proxy-providers:
   N和1:
     url: "http://jia1.jiaguwei.tk:3001/CKg2abstVnOeRpm1aB4G/download/collection/%E5%A4%9A%E5%90%88%E4%B8%80"
     type: http
-    interval: 86400
+    interval: 864000
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -31,7 +33,7 @@ proxies:
   - {name: 拒绝, type: reject}
 
 # ========================
-# 全局设置
+# 全局设置 (优化稳定性)
 # ========================
 port: 7890
 socks-port: 7891
@@ -49,7 +51,7 @@ external-ui-url: https://gh-proxy.com/github.com/Zephyruso/zashboard/archive/ref
 secret: "123456"
 
 # ========================
-# DNS 设置
+# DNS 设置 (优化解析速度)
 # ========================
 dns:
   enable: true
@@ -58,7 +60,8 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   nameserver:
-    - 192.168.3.1
+    - 223.5.5.5
+    - 114.114.114.114  
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - +.lan
@@ -74,24 +77,24 @@ dns:
     - +.wxda.net
 
 # ========================
-# TUN 模块
+# TUN 模块 (核心修复点：防止防火墙重置)
 # ========================
 tun:
   enable: true
-  stack: gvisor
+  stack: system           # 改为 system，降低 CPU 负载，减少进程闪退
   device: utun
   endpoint-independent-nat: true
   auto-route: true
   auto-detect-interface: true
-  strict-route: true
-  mtu: 9000
+  strict-route: false     # 改为 false，避免与 OpenWrt 路由表冲突导致网络震荡
+  mtu: 1500               # 必须为 1500，9000 会导致硬件层面的网卡重置
 
 profile:
   store-selected: true
   store-fake-ip: true
 
 # ========================
-# 策略组（保留你原来的结构）
+# 策略组 (保持原有结构)
 # ========================
 default: &default
   type: select
@@ -168,7 +171,7 @@ proxy-groups:
   - {name: 其他, <<: *default}
 
 # ========================
-# 规则引擎
+# 规则引擎 (保持原有逻辑)
 # ========================
 rules:
   # 高优先级直连
@@ -181,7 +184,7 @@ rules:
   - DOMAIN-SUFFIX,*.jiaguwei.tk,直连
   - DOMAIN-SUFFIX,*.sjzkn1.tk,直连
 
-  # 强力广告拦截（置顶）
+  # 强力广告拦截 (置顶)
   - RULE-SET,秋风广告,广告拦截
 
   # 业务规则
@@ -204,7 +207,7 @@ rules:
   - MATCH,其他
 
 # ========================
-# 规则集提供者
+# 规则集提供者 (保持原有配置)
 # ========================
 rule-anchor:
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
@@ -212,7 +215,6 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 
 rule-providers:
-  # 原有规则集
   TEST / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Check.list"}
   人工智能 / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
   GitHub / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/github.mrs"}
@@ -230,7 +232,6 @@ rule-providers:
   Private / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/private.mrs"}
   广告拦截 / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Block.list"}
 
-  # 新增强力广告拦截
   秋风广告:
     type: http
     behavior: classical
