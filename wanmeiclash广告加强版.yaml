@@ -1,7 +1,6 @@
 # ========================
-# Clash-ALL 优化配置（稳定修复版）
+# 优化配置（稳定修复版）
 # 适用：玩客云、ARMv7 及低功耗 OpenWrt 设备
-# 修改点：修复 MTU、切换系统堆栈、优化 DNS 稳定性
 # ========================
 
 # ========================
@@ -51,7 +50,7 @@ external-ui-url: https://gh-proxy.com/github.com/Zephyruso/zashboard/archive/ref
 secret: "123456"
 
 # ========================
-# DNS 设置 (优化解析速度)
+# DNS 设置 
 # ========================
 dns:
   enable: true
@@ -61,7 +60,9 @@ dns:
   fake-ip-range: 198.18.0.1/16
   nameserver:
     - 223.5.5.5
-    - 114.114.114.114  
+    - 114.114.114.114
+    - 8.8.8.8
+    - 1.1.1.1
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - +.lan
@@ -77,27 +78,27 @@ dns:
     - +.wxda.net
 
 # ========================
-# TUN 模块 (核心修复点：防止防火墙重置)
+# TUN 模块 (核心修复点)
 # ========================
 tun:
-  enable: true
-  stack: system           # 改为 system，降低 CPU 负载，减少进程闪退
+  enable: false         
+  stack: system
   device: utun
   endpoint-independent-nat: true
-  auto-route: true
-  auto-detect-interface: true
-  strict-route: false     # 改为 false，避免与 OpenWrt 路由表冲突导致网络震荡
-  mtu: 1500               # 必须为 1500，9000 会导致硬件层面的网卡重置
+  auto-route: false    
+  auto-detect-interface: false
+  strict-route: false
+  mtu: 1500
 
 profile:
   store-selected: true
   store-fake-ip: true
 
 # ========================
-# 策略组 (保持原有结构)
+# 策略组 
 # ========================
-default: &default
-  type: select
+默认: &default
+  输入: select
   proxies:
     - 所有-自动
     - 所有-手动
@@ -106,60 +107,56 @@ default: &default
     - 拒绝
 
 proxy-groups:
-  # 其他组
   - name: 其他-故转
-    type: fallback
+    输入: fallback
     interval: 300
     lazy: false
     proxies:
       - 其他-手动
       - 其他-自动
   - name: 其他-手动
-    type: select
+    输入: select
     include-all: true
     filter: "^((?!(直连|拒绝)).)*$"
   - name: 其他-自动
-    type: url-test
+    输入: url-test
     include-all: true
     tolerance: 50
     interval: 300
     filter: "^((?!(直连|拒绝)).)*$"
 
-  # 业务分流组
   - name: 所有-故转
-    type: fallback
+    输入: fallback
     interval: 300
     lazy: false
     proxies:
       - 所有-手动
       - 所有-自动
   - name: 所有-手动
-    type: select
+    输入: select
     include-all: true
     filter: "^((?!(直连|拒绝)).)*$"
   - name: 所有-自动
-    type: url-test
+    输入: url-test
     include-all: true
     tolerance: 50
     interval: 300
     filter: "^((?!(直连|拒绝)).)*$"
 
-  # 独立应用组
   - name: 电报
-    type: select
+    输入: select
     include-all: true
     proxies:
       - 所有-自动
       - 所有-手动
 
   - name: 推特
-    type: select
+    输入: select
     include-all: true
     proxies:
       - 所有-自动
       - 所有-手动
 
-  # 其他应用使用默认锚点
   - {name: 人工智能, <<: *default}
   - {name: GitHub, <<: *default}
   - {name: 油管, <<: *default}
@@ -171,23 +168,18 @@ proxy-groups:
   - {name: 其他, <<: *default}
 
 # ========================
-# 规则引擎 (保持原有逻辑)
+# 规则引擎 
 # ========================
 rules:
-  # 高优先级直连
   - DOMAIN-SUFFIX,api.cloudflare.com,直连
   - DOMAIN-SUFFIX,cloudflare.com,直连
   - DOMAIN-SUFFIX,cloudflared.com,直连
   - DOMAIN-SUFFIX,cfargotunnel.com,直连
-  - DOMAIN-SUFFIX,www.zhipin.com,直连
+  - DOMAIN-SUFFIX,*.zhipin.com,直连
   - DOMAIN-SUFFIX,*.sjzkn1.cf,直连
   - DOMAIN-SUFFIX,*.jiaguwei.tk,直连
   - DOMAIN-SUFFIX,*.sjzkn1.tk,直连
-
-  # 强力广告拦截 (置顶)
   - RULE-SET,秋风广告,广告拦截
-
-  # 业务规则
   - RULE-SET,TEST / Domain,网络测速
   - RULE-SET,广告拦截 / Domain,广告拦截
   - RULE-SET,人工智能 / Domain,人工智能
@@ -207,7 +199,7 @@ rules:
   - MATCH,其他
 
 # ========================
-# 规则集提供者 (保持原有配置)
+# 规则集提供者 
 # ========================
 rule-anchor:
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
@@ -233,9 +225,9 @@ rule-providers:
   广告拦截 / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Block.list"}
 
   秋风广告:
-    type: http
+    输入: http
     behavior: classical
     format: yaml
-    interval: 86400
+    interval: 604800  
     size-limit: 0
     url: "https://gh-proxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash-Classical.yaml"
