@@ -223,18 +223,12 @@
   ],
   "lives": [
     {
-      "group": "高清直播",
+      "group": "默认分组",
       "channels": [
         {
-          "name": "范明明直播源",
+          "name": "电视直播(IPv4)",
           "urls": [
-            "https://live.fanmingming.com/tv/m3u/ipv6.m3u"
-          ]
-        },
-        {
-          "name": "综合电视直播",
-          "urls": [
-            "https://raw.githubusercontent.com/wwb521/live/main/tv.m3u"
+            "https://live.fanmingming.com/tv/m3u/ipv4.m3u"
           ]
         }
       ]
