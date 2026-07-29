@@ -2,7 +2,7 @@
   "sites": [
     {
       "key": "iqiyi",
-      "name": "靳先生长期维护",
+      "name": "🦄📺靳先生长期维护",
       "type": 1,
       "api": "https://iqiyizyapi.com/api.php/provide/vod/",
       "searchable": 1,
