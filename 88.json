@@ -223,16 +223,10 @@
   ],
   "lives": [
     {
-      "group": "电视直播",
-      "channels": [
-        {
-          "name": "综合与地方台直播",
-          "urls": [
-            "https://live.fanmingming.com/tv/m3u/ipv4.m3u",
-            "https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.txt"
-          ]
-        }
-      ]
+      "name": "🦄地方直播",
+      "type": 0,
+      "ua": "okhttp",
+      "url": "https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt"
     }
   ],
   "parses": [
