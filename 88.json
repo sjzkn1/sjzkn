@@ -222,18 +222,12 @@
     }
   ],
   "lives": [
-    {
-      "group": "电视直播",
-      "channels": [
         {
-          "name": "综合直播",
-          "urls": [
-            "https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt"
-          ]
-        }
-      ]
-    }
-  ],
+            "name": "🦄地方直播",
+            "type": 0,
+            "ua": "okhttp",
+            "url": "https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt"
+        }, 
   "parses": [
     {
       "name": "七哥解析",
