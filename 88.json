@@ -2,7 +2,7 @@
   "sites": [
     {
       "key": "iqiyi",
-      "name": "爱奇艺资源",
+      "name": "靳先生长期维护",
       "type": 1,
       "api": "https://iqiyizyapi.com/api.php/provide/vod/",
       "searchable": 1,
@@ -223,12 +223,12 @@
   ],
   "lives": [
     {
-      "group": "默认分组",
+      "group": "电视直播",
       "channels": [
         {
-          "name": "电视直播(IPv4)",
+          "name": "综合直播",
           "urls": [
-            "https://live.fanmingming.com/tv/m3u/ipv4.m3u"
+            "https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.txt"
           ]
         }
       ]
