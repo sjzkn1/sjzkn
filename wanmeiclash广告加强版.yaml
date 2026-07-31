@@ -116,9 +116,9 @@ rules:
   - DOMAIN-SUFFIX,cloudflared.com,直连
   - DOMAIN-SUFFIX,cfargotunnel.com,直连
   - DOMAIN-SUFFIX,zhipin.com,直连
-  - DOMAIN-SUFFIX,sjzkn1.cf,直连
-  - DOMAIN-SUFFIX,jiaguwei.tk,直连
-  - DOMAIN-SUFFIX,sjzkn1.tk,直连
+  - DOMAIN-SUFFIX,*.sjzkn1.cf,直连
+  - DOMAIN-SUFFIX,*.jiaguwei.tk,直连
+  - DOMAIN-SUFFIX,*.sjzkn1.tk,直连
   - RULE-SET,秋风广告,广告拦截
   - RULE-SET,TEST / Domain,网络测速
   - RULE-SET,广告拦截 / Domain,广告拦截
