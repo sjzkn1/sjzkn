@@ -4,7 +4,7 @@
 # ========================
 proxy-providers:
   N和1:
-    url: "https://xhyc.sjzkn.us.ci/CKg2abstVnOeRpm1aB4G/download/collection/%E5%A4%9A%E5%90%88%E4%B8%80"
+    url: "http://jia1.jiaguwei.tk:3001/CKg2abstVnOeRpm1aB4G/download/collection/%E5%A4%9A%E5%90%88%E4%B8%80"
     type: http
     interval: 864000
     health-check:
