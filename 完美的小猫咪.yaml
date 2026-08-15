@@ -4,13 +4,13 @@
 # ========================
 proxy-providers:
   N和1:
-    url: "http://jia1.jiaguwei.tk:3001/CKg2abstVnOeRpm1aB4G/download/collection/%E5%A4%9A%E5%90%88%E4%B8%80"
+    url: "https://xhyc.sjzkn.us.ci/CKg2abstVnOeRpm1aB4G/download/collection/%E5%A4%9A%E5%90%88%E4%B8%80"
     type: http
     interval: 864000
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
-      interval: 300
+      interval: 600
     proxy: 直连
   公益节点:
     url: "http://jia1.jiaguwei.tk:3001/CKg2abstVnOeRpm1aB4G/download/collection/%E5%85%8D%E8%B4%B9%E6%9C%BA%E5%9C%BA"
@@ -19,7 +19,7 @@ proxy-providers:
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
-      interval: 300
+      interval: 600
     proxy: 直连
 
 proxies:
@@ -85,15 +85,15 @@ proxy-groups:
   # 基础组先定义
   - name: 其他-手动
     type: select
-    include-all: true
-    filter: "^((?!(直连|拒绝)).)*$"
+    use:
+      - 公益节点
 
   - name: 其他-自动
     type: url-test
-    include-all: true
+    use:
+      - 公益节点
     tolerance: 50
-    interval: 300
-    filter: "^((?!(直连|拒绝)).)*$"
+    interval: 600
 
   - name: 其他-故转
     type: fallback
@@ -112,7 +112,7 @@ proxy-groups:
     type: url-test
     include-all: true
     tolerance: 50
-    interval: 300
+    interval: 600
     filter: "^((?!(直连|拒绝)).)*$"
 
   - name: 所有-故转
@@ -221,6 +221,19 @@ proxy-groups:
 
 # 规则（广告优先）
 rules:
+# Cloudflare Tunnel 相关（必须直连）
+  - DOMAIN-SUFFIX,argotunnel.com,DIRECT
+  - DOMAIN-SUFFIX,cftunnel.com,DIRECT
+  - DOMAIN-SUFFIX,cfargotunnel.com,DIRECT
+  - DOMAIN-SUFFIX,cloudflareaccess.com,DIRECT
+  - DOMAIN-SUFFIX,cloudflareclient.com,DIRECT
+
+# Tunnel 边缘节点 IP 段（官方文档明确的）
+  - IP-CIDR,198.41.192.0/24,DIRECT,no-resolve
+  - IP-CIDR,198.41.200.0/24,DIRECT,no-resolve
+
+# 可选：强制 7844 端口直连（更保险）
+  - DST-PORT,7844,DIRECT
   - DOMAIN-SUFFIX,api.cloudflare.com,直连
   - DOMAIN-SUFFIX,cloudflare.com,直连
   - DOMAIN-SUFFIX,cloudflared.com,直连
@@ -231,6 +244,7 @@ rules:
   - DOMAIN-SUFFIX,*.sjzkn1.tk,直连
 
   # ========== 加强国内广告过滤 ==========
+  - RULE-SET,adrules,广告拦截
   - RULE-SET,秋风广告,广告拦截
   - RULE-SET,anti-AD,广告拦截
   - RULE-SET,Advertising-Domain,广告拦截
@@ -256,6 +270,13 @@ rules:
 # 规则提供者
 rule-providers:
   # 广告规则
+  adrules:
+    type: http
+    behavior: domain
+    format: text
+    interval: 86400
+    url: "https://adrules.top/adrules_domainset.txt"
+
   秋风广告:
     type: http
     behavior: classical
