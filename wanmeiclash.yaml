@@ -105,15 +105,15 @@ proxy-groups:
 
   - name: 所有-手动
     type: select
-    include-all: true
-    filter: "^((?!(直连|拒绝)).)*$"
+    use:
+      - N和1
 
   - name: 所有-自动
     type: url-test
-    include-all: true
+    use:
+      - N和1
     tolerance: 50
     interval: 600
-    filter: "^((?!(直连|拒绝)).)*$"
 
   - name: 所有-故转
     type: fallback
@@ -126,17 +126,13 @@ proxy-groups:
   # 功能组
   - name: 电报
     type: select
-    include-all: true
-    proxies:
-      - 所有-自动
-      - 所有-手动
+    use:
+      - N和1
 
   - name: 推特
     type: select
-    include-all: true
-    proxies:
-      - 所有-自动
-      - 所有-手动
+    use:
+      - N和1
 
   - name: 人工智能
     type: select
