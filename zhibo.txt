@@ -24,5 +24,7 @@ https://sub.maflya.com/
 https://sunmiao4458.github.io/free-proxy-airport/clash.yaml
 # 永久10
 https://hi8qrey-8z25.chinat.eu.org/sub?uuid=26524cce-d514-4014-a426-365fb266a14d&host=icgk.media-relay.danfeng4.xyz&path=/danfeng-9753ks-hm4loz-1q7q-10pjvle6?ed=2560&ech=1
-
 # 永久11
+https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/base64.txt
+# 永久12
+https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/nodes.txt
