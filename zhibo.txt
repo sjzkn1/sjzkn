@@ -2,6 +2,8 @@
 https://raw.githubusercontent.com/beck-8/sub-urls/refs/heads/main/sub.txt
 # 周润发
 https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml
+https://sub.445569.xyz/
+https://sub.maflya.com/
 # 帅帅
 https://raw.githubusercontent.com/shuaidaoya/FreeNodes/refs/heads/main/nodes/all.yaml
 # 永久1
