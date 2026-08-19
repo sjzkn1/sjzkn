@@ -1,5 +1,9 @@
 # myself
 https://raw.githubusercontent.com/beck-8/sub-urls/refs/heads/main/sub.txt
+https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/jp/all.txt
+https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/hk/all.txt
+https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/1.1.txt
+https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/1.2.txt
 # 周润发
 https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml
 # 周润发2
