@@ -4,7 +4,7 @@
 # ========================
 proxy-providers:
   N和1:
-    url: "https://xhyc.sjzkn.us.ci/CKg2abstVnOeRpm1aB4G/download/collection/%E5%A4%9A%E5%90%88%E4%B8%80"
+    url: "https://xhyc.sjzkn.us.ci/CKg2abstV2nOeRpm1aB4G/download/collection/%E5%A4%9A%E5%90%88%E4%B8%80"
     type: http
     interval: 864000
     health-check:
@@ -13,7 +13,7 @@ proxy-providers:
       interval: 600
     proxy: 直连
   公益节点:
-    url: "http://jia1.jiaguwei.tk:3001/CKg2abstVnOeRpm1aB4G/download/collection/%E5%85%8D%E8%B4%B9%E6%9C%BA%E5%9C%BA"
+    url: "http://jia1.jiaguwei.tk:3001/CKg2abstVnOeRpm12aB4G/download/collection/%E5%85%8D%E8%B4%B9%E6%9C%BA%E5%9C%BA"
     type: http
     interval: 86400
     health-check:
