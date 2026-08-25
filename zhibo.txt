@@ -1,5 +1,6 @@
 # myself
 https://raw.githubusercontent.com/beck-8/sub-urls/refs/heads/main/sub.txt
+https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/base64.txt
 https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/jp/all.txt
 https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/hk/all.txt
 https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/1.1.txt
