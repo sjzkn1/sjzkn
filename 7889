@@ -1,0 +1,94 @@
+{
+  "sites": [
+    {
+      "key": "xiaoyakankan",
+      "name": "小鸭子看看",
+      "type": 3,
+      "api": "csp_XPath",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./小鸭子看看.py"
+    },
+    {
+      "key": "xingchen",
+      "name": "星辰影院",
+      "type": 3,
+      "api": "csp_XPath",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./星辰影院.py"
+    },
+    {
+      "key": "xinghe",
+      "name": "星河影视",
+      "type": 3,
+      "api": "csp_XPath",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./星河影视.py"
+    },
+    {
+      "key": "xingya",
+      "name": "星芽短剧",
+      "type": 3,
+      "api": "csp_XPath",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./星芽短剧.py"
+    },
+    {
+      "key": "xiongdi",
+      "name": "兄弟影视",
+      "type": 3,
+      "api": "csp_XPath",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./兄弟影视.py"
+    },
+    {
+      "key": "xiongmao",
+      "name": "熊猫视频",
+      "type": 3,
+      "api": "csp_XPath",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./熊猫视频.py"
+    },
+    {
+      "key": "pandalive",
+      "name": "熊猫直播",
+      "type": 3,
+      "api": "csp_XPath",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./熊猫直播.py"
+    },
+    {
+      "key": "xingfu",
+      "name": "幸福加油站🔞",
+      "type": 3,
+      "api": "csp_XPath",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./幸福加油站🔞.py"
+    },
+    {
+      "key": "xingyun",
+      "name": "性运机场🔞",
+      "type": 3,
+      "api": "csp_XPath",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./性运机场🔞.py"
+    }
+  ]
+}
