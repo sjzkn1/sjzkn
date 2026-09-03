@@ -1,94 +1,64 @@
 {
   "sites": [
     {
-      "key": "xiaoyakankan",
-      "name": "小鸭子看看",
+      "key": "py_FreeOK",
+      "name": "FreeOK",
       "type": 3,
-      "api": "csp_XPath",
+      "api": "csp_FreeOK",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/sjzkn1/sjzkn/refs/heads/main/py/小鸭子看看.py"
+      "ext": "https://ghproxy.net/https://raw.githubusercontent.com/sjzkn1/sjzkn/main/py/FreeOK.py"
     },
     {
-      "key": "xingchen",
-      "name": "星辰影院",
+      "key": "py_剧OK",
+      "name": "剧OK",
       "type": 3,
-      "api": "csp_XPath",
+      "api": "csp_剧OK",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/sjzkn1/sjzkn/refs/heads/main/py/星辰影院.py"
+      "ext": "https://ghproxy.net/https://raw.githubusercontent.com/sjzkn1/sjzkn/main/py/剧OK.py"
     },
     {
-      "key": "xinghe",
-      "name": "星河影视",
+      "key": "py_4K影视",
+      "name": "4K影视",
       "type": 3,
-      "api": "csp_XPath",
+      "api": "csp_4K影视",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/sjzkn1/sjzkn/refs/heads/main/py/星河影视.py"
+      "ext": "https://ghproxy.net/https://raw.githubusercontent.com/sjzkn1/sjzkn/main/py/4K影视.py"
     },
     {
-      "key": "xingya",
-      "name": "星芽短剧",
+      "key": "py_低端影视",
+      "name": "低端影视",
       "type": 3,
-      "api": "csp_XPath",
+      "api": "csp_低端影视",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/sjzkn1/sjzkn/refs/heads/main/py/星芽短剧.py"
+      "ext": "https://ghproxy.net/https://raw.githubusercontent.com/sjzkn1/sjzkn/main/py/低端影视.py"
     },
     {
-      "key": "xiongdi",
-      "name": "兄弟影视",
+      "key": "py_七猫影视",
+      "name": "七猫影视",
       "type": 3,
-      "api": "csp_XPath",
+      "api": "csp_七猫影视",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/sjzkn1/sjzkn/refs/heads/main/py/兄弟影视.py"
+      "ext": "https://ghproxy.net/https://raw.githubusercontent.com/sjzkn1/sjzkn/main/py/七猫影视.py"
     },
     {
-      "key": "xiongmao",
-      "name": "熊猫视频",
+      "key": "py_Auete影视",
+      "name": "Auete影视",
       "type": 3,
-      "api": "csp_XPath",
+      "api": "csp_Auete影视",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/sjzkn1/sjzkn/refs/heads/main/py/熊猫视频.py"
-    },
-    {
-      "key": "pandalive",
-      "name": "熊猫直播",
-      "type": 3,
-      "api": "csp_XPath",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/sjzkn1/sjzkn/refs/heads/main/py/熊猫直播.py"
-    },
-    {
-      "key": "xingfu",
-      "name": "幸福加油站🔞",
-      "type": 3,
-      "api": "csp_XPath",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/sjzkn1/sjzkn/refs/heads/main/py/幸福加油站🔞.py"
-    },
-    {
-      "key": "xingyun",
-      "name": "性运机场🔞",
-      "type": 3,
-      "api": "csp_XPath",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/sjzkn1/sjzkn/refs/heads/main/py/性运机场🔞.py"
+      "ext": "https://ghproxy.net/https://raw.githubusercontent.com/sjzkn1/sjzkn/main/py/Auete影视🍀TG%20@hshsjk9.py"
     }
   ]
 }
