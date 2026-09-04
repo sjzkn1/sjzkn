@@ -1,4 +1,8 @@
 {
+  "spider": "./9527.jar",
+  "wallpaper": "https://t.alcy.cc/fj",
+  "logo": "https://img.meituan.net/poiugc/018d4112d5aaf3d0982bb6bbc2bf71b2292451.gif",
+  "warningText": "资源来自网络，无任何盈利纯学习技术！[所有内容仅供学习使用，请勿用于违法及商业用途，请勿付费购买]",
   "sites": [
     {
       "key": "88",
@@ -8,99 +12,37 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "国产剧",
-        "现代都市",
-        "反转爽剧",
-        "女频恋爱",
-        "古装仙侠",
-        "年代穿越",
-        "脑洞悬疑",
-        "邵氏电影",
-        "大陆综艺",
-        "动画片",
-        "有声动漫",
-        "演唱会",
-        "动作片",
-        "喜剧片",
-        "战争片",
-        "爱情片",
-        "恐怖片"
-      ]
+      "categories": ["国产剧","现代都市","反转爽剧","女频恋爱","古装仙侠","年代穿越","脑洞悬疑","邵氏电影","大陆综艺","动画片","有声动漫","演唱会","动作片","喜剧片","战争片","爱情片","恐怖片"]
     },
     {
       "key": "5",
       "name": "豆瓣资源",
       "type": 1,
-      "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/josn",
+      "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/json",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "短剧大全",
-        "重生民国",
-        "穿越现代",
-        "反转爽剧",
-        "言情总裁",
-        "现代都市",
-        "古装仙侠",
-        "悬疑烧脑",
-        "大陆综艺",
-        "港台综艺",
-        "国产剧",
-        "香港剧",
-        "台湾剧",
-        "韩剧",
-        "动作片",
-        "爱情片",
-        "喜剧片",
-        "科幻片",
-        "恐怖片",
-        "剧情片"
-      ]
+      "categories": ["短剧大全","重生民国","穿越现代","反转爽剧","言情总裁","现代都市","古装仙侠","悬疑烧脑","大陆综艺","港台综艺","国产剧","香港剧","台湾剧","韩剧","动作片","爱情片","喜剧片","科幻片","恐怖片","剧情片"]
     },
     {
       "key": "4",
       "name": "旺旺资源",
       "type": 1,
-      "api": "https://ww.tyyszy5.com/api.php/provide/vod/?ac=lis",
+      "api": "https://ww.tyyszy5.com/api.php/provide/vod/?ac=list",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "短剧"
-      
-      ]
+      "categories": ["短剧"]
     },
     {
       "key": "1",
       "name": "茅台资源",
       "type": 1,
-      "api": "https://caiji.maotaizy.cc/api.php/provide/vod/at/josn",
+      "api": "https://caiji.maotaizy.cc/api.php/provide/vod/at/json",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "短剧大全",
-        "穿越现代",
-        "重生民国",
-        "反转爽剧",
-        "现代都市",
-        "古装仙侠",
-        "言情总裁",
-        "悬疑烧脑",
-        "国产剧",
-        "香港剧",
-        "大陆综艺",
-        "动作片",
-        "爱情片",
-        "喜剧片",
-        "科幻片",
-        "恐怖片",
-        "剧情片",
-        "战争片",
-        "演唱会"
-      ]
+      "categories": ["短剧大全","穿越现代","重生民国","反转爽剧","现代都市","古装仙侠","言情总裁","悬疑烧脑","国产剧","香港剧","大陆综艺","动作片","爱情片","喜剧片","科幻片","恐怖片","剧情片","战争片","演唱会"]
     },
     {
       "key": "19",
@@ -110,23 +52,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "年代穿越",
-        "脑洞悬疑",
-        "古装仙侠",
-        "现代都市",
-        "女频恋爱",
-        "反转爽剧",
-        "有声动漫",
-        "动作片",
-        "喜剧片",
-        "爱情片",
-        "科幻片",
-        "恐怖片",
-        "战争片",
-        "国产剧",
-        "香港剧"
-      ]
+      "categories": ["年代穿越","脑洞悬疑","古装仙侠","现代都市","女频恋爱","反转爽剧","有声动漫","动作片","喜剧片","爱情片","科幻片","恐怖片","战争片","国产剧","香港剧"]
     },
     {
       "key": "6",
@@ -136,13 +62,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "电视剧/国产剧",
-        "电视剧/香港剧",
-        "电影/动作片",
-        "电影/喜剧片",
-        "电影/悬疑片"
-      ]
+      "categories": ["电视剧/国产剧","电视剧/香港剧","电影/动作片","电影/喜剧片","电影/悬疑片"]
     },
     {
       "key": "2",
@@ -152,24 +72,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "现代都市",
-        "年代穿越",
-        "古装仙侠",
-        "脑洞悬疑",
-        "女频恋爱",
-        "反转爽剧",
-        "国产剧",
-        "港剧",
-        "动作片",
-        "喜剧片",
-        "爱情片",
-        "科幻片",
-        "恐怖片",
-        "剧情片",
-        "战争片",
-        "动画片"
-      ]
+      "categories": ["现代都市","年代穿越","古装仙侠","脑洞悬疑","女频恋爱","反转爽剧","国产剧","港剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","动画片"]
     },
     {
       "key": "3",
@@ -179,21 +82,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "短剧",
-        "国产剧",
-        "香港剧",
-        "台湾剧",
-        "喜剧片",
-        "爱情片",
-        "科幻片",
-        "恐怖片",
-        "战争片",
-        "剧情片",
-        "悬疑片",
-        "动画片",
-        "大陆综艺"
-      ]
+      "categories": ["短剧","国产剧","香港剧","台湾剧","喜剧片","爱情片","科幻片","恐怖片","战争片","剧情片","悬疑片","动画片","大陆综艺"]
     },
     {
       "key": "9",
@@ -203,76 +92,27 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "古装仙侠",
-        "年代穿越",
-        "脑洞悬疑",
-        "现代都市",
-        "反转爽剧",
-        "女频恋爱",
-        "4k电影",
-        "国产剧",
-        "港剧",
-        "韩剧",
-        "台剧",
-        "动作片",
-        "喜剧片",
-        "科幻片",
-        "恐怖片",
-        "爱情片",
-        "战争片",
-        "大陆综艺",
-        "港台综艺"
-      ]
+      "categories": ["古装仙侠","年代穿越","脑洞悬疑","现代都市","反转爽剧","女频恋爱","4k电影","国产剧","港剧","韩剧","台剧","动作片","喜剧片","科幻片","恐怖片","爱情片","战争片","大陆综艺","港台综艺"]
     },
     {
       "key": "11",
       "name": "暴风资源",
       "type": 1,
-      "api": " https://bfzyapi.com/api.php/provide/vod/",
+      "api": "https://bfzyapi.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "重生民国",
-        "年代穿越",
-        "现代言情",
-        "反转爽文",
-        "女恋总裁",
-        "闪婚离婚",
-        "都市脑洞",
-        "古装仙侠",
-        "国产剧",
-        "香港剧",
-        "韩国剧",
-        "台湾剧",
-        "动作片",
-        "喜剧片",
-        "恐怖片",
-        "科幻片",
-        "爱情片",
-        "战争片"
-      ]
+      "categories": ["重生民国","年代穿越","现代言情","反转爽文","女恋总裁","闪婚离婚","都市脑洞","古装仙侠","国产剧","香港剧","韩国剧","台湾剧","动作片","喜剧片","恐怖片","科幻片","爱情片","战争片"]
     },
     {
       "key": "16",
       "name": "新浪资源",
       "type": 1,
-      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/josn",
+      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/json",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "短剧",
-        "大陆剧",
-        "港澳剧",
-        "动作片",
-        "爱情片",
-        "科幻片",
-        "战争片",
-        "恐怖片",
-        "喜剧片"
-      ]
+      "categories": ["短剧","大陆剧","港澳剧","动作片","爱情片","科幻片","战争片","恐怖片","喜剧片"]
     },
     {
       "key": "21",
@@ -282,18 +122,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "短剧",
-        "内地剧",
-        "香港剧",
-        "韩剧",
-        "动作片",
-        "喜剧片",
-        "科幻片",
-        "恐怖片",
-        "剧情片",
-        "爱情片"
-      ]
+      "categories": ["短剧","内地剧","香港剧","韩剧","动作片","喜剧片","科幻片","恐怖片","剧情片","爱情片"]
     },
     {
       "key": "baidu",
@@ -303,13 +132,9 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "categories": [
-        "大陆剧",
-        "港澳剧",
-        "台湾剧"
-      ]
+      "categories": ["大陆剧","港澳剧","台湾剧"]
     },
-{
+    {
       "key": "4K影视",
       "name": "4K影视",
       "type": 3,
@@ -578,12 +403,12 @@
       "quickSearch": 1,
       "filterable": 0,
       "changeable": 0
-    }
+    },
     {
       "key": "jin",
-      "name": "靳先生，长期维护 ",
+      "name": "靳先生长期维护",
       "type": 1,
-      "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/jos",
+      "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/json",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -595,9 +420,7 @@
       "channels": [
         {
           "name": "直播源",
-          "urls": [
-            "about:blank"
-          ]
+          "urls": ["about:blank"]
         }
       ]
     }
@@ -606,244 +429,60 @@
     {
       "name": "解析1",
       "type": 0,
-      "url": "https://xxx.xxx?jx="
+      "url": "https://jx.playerjy.com/?url="
+    },
+    {
+      "name": "解析2",
+      "type": 0,
+      "url": "https://jx.xmflv.com/?url="
     }
   ],
-  "flags": [
-    "youku",
-    "qq",
-    "iqiyi",
-    "qiyi",
-    "letv",
-    "sohu",
-    "tudou",
-    "pptv",
-    "mgtv",
-    "wasu"
-  ],
+  "flags": ["youku","qq","iqiyi","qiyi","letv","sohu","tudou","pptv","mgtv","wasu"],
   "ijk": [
     {
       "group": "软解码",
       "options": [
-        {
-          "category": 4,
-          "name": "opensles",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "overlay-format",
-          "value": "842225234"
-        },
-        {
-          "category": 4,
-          "name": "framedrop",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "soundtouch",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "start-on-prepared",
-          "value": "1"
-        },
-        {
-          "category": 1,
-          "name": "http-detect-range-support",
-          "value": "0"
-        },
-        {
-          "category": 1,
-          "name": "fflags",
-          "value": "fastseek"
-        },
-        {
-          "category": 2,
-          "name": "skip_loop_filter",
-          "value": "48"
-        },
-        {
-          "category": 4,
-          "name": "reconnect",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "max-buffer-size",
-          "value": "5242880"
-        },
-        {
-          "category": 4,
-          "name": "enable-accurate-seek",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-auto-rotate",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-handle-resolution-change",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-hevc",
-          "value": "0"
-        }
+        {"category":4,"name":"opensles","value":"0"},
+        {"category":4,"name":"overlay-format","value":"842225234"},
+        {"category":4,"name":"framedrop","value":"1"},
+        {"category":4,"name":"soundtouch","value":"1"},
+        {"category":4,"name":"start-on-prepared","value":"1"},
+        {"category":1,"name":"http-detect-range-support","value":"0"},
+        {"category":1,"name":"fflags","value":"fastseek"},
+        {"category":2,"name":"skip_loop_filter","value":"48"},
+        {"category":4,"name":"reconnect","value":"1"},
+        {"category":4,"name":"max-buffer-size","value":"5242880"},
+        {"category":4,"name":"enable-accurate-seek","value":"0"},
+        {"category":4,"name":"mediacodec","value":"0"},
+        {"category":4,"name":"mediacodec-auto-rotate","value":"0"},
+        {"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},
+        {"category":4,"name":"mediacodec-hevc","value":"0"},
+        {"category":1,"name":"dns_cache_timeout","value":"600000000"}
       ]
     },
     {
       "group": "硬解码",
       "options": [
-        {
-          "category": 4,
-          "name": "opensles",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "overlay-format",
-          "value": "842225234"
-        },
-        {
-          "category": 4,
-          "name": "framedrop",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "soundtouch",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "start-on-prepared",
-          "value": "1"
-        },
-        {
-          "category": 1,
-          "name": "http-detect-range-support",
-          "value": "0"
-        },
-        {
-          "category": 1,
-          "name": "fflags",
-          "value": "fastseek"
-        },
-        {
-          "category": 2,
-          "name": "skip_loop_filter",
-          "value": "48"
-        },
-        {
-          "category": 4,
-          "name": "reconnect",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "max-buffer-size",
-          "value": "5242880"
-        },
-        {
-          "category": 4,
-          "name": "enable-accurate-seek",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-auto-rotate",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-handle-resolution-change",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-hevc",
-          "value": "1"
-        }
+        {"category":4,"name":"opensles","value":"0"},
+        {"category":4,"name":"overlay-format","value":"842225234"},
+        {"category":4,"name":"framedrop","value":"1"},
+        {"category":4,"name":"soundtouch","value":"1"},
+        {"category":4,"name":"start-on-prepared","value":"1"},
+        {"category":1,"name":"http-detect-range-support","value":"0"},
+        {"category":1,"name":"fflags","value":"fastseek"},
+        {"category":2,"name":"skip_loop_filter","value":"48"},
+        {"category":4,"name":"reconnect","value":"1"},
+        {"category":4,"name":"max-buffer-size","value":"5242880"},
+        {"category":4,"name":"enable-accurate-seek","value":"0"},
+        {"category":4,"name":"mediacodec","value":"1"},
+        {"category":4,"name":"mediacodec-auto-rotate","value":"1"},
+        {"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},
+        {"category":4,"name":"mediacodec-hevc","value":"1"},
+        {"category":1,"name":"dns_cache_timeout","value":"600000000"}
       ]
     }
   ],
   "ads": [
-    "mimg.0c1q0l.cn",
-    "www.googletagmanager.com",
-    "www.google-analytics.com",
-    "mc.usihnbcq.cn",
-    "mg.g1mm3d.cn",
-    "mscs.svaeuzh.cn",
-    "cnzz.hhttm.top",
-    "tp.vinuxhome.com",
-    "cnzz.mmstat.com",
-    "www.baihuillq.com",
-    "s23.cnzz.com",
-    "z3.cnzz.com",
-    "c.cnzz.com",
-    "stj.v1vo.top",
-    "z12.cnzz.com",
-    "img.mosflower.cn",
-    "tips.gamevvip.com",
-    "ehwe.yhdtns.com",
-    "xdn.cqqc3.com",
-    "www.jixunkyy.cn",
-    "sp.chemacid.cn",
-    "hm.baidu.com",
-    "s9.cnzz.com",
-    "z6.cnzz.com",
-    "um.cavuc.com",
-    "mav.mavuz.com",
-    "wofwk.aoidf3.com",
-    "z5.cnzz.com",
-    "xc.hubeijieshikj.cn",
-    "tj.tianwenhu.com",
-    "xg.gars57.cn",
-    "k.jinxiuzhilv.com",
-    "cdn.bootcss.com",
-    "ppl.xunzhuo123.com",
-    "xomk.jiangjunmh.top",
-    "img.xunzhuo123.com",
-    "z1.cnzz.com",
-    "s13.cnzz.com",
-    "xg.huataisangao.cn",
-    "z7.cnzz.com",
-    "xg.huataisangao.cn",
-    "z2.cnzz.com",
-    "s96.cnzz.com",
-    "q11.cnzz.com",
-    "thy.dacedsfa.cn",
-    "xg.whsbpw.cn",
-    "s19.cnzz.com",
-    "z8.cnzz.com",
-    "s4.cnzz.com",
-    "f5w.as12df.top",
-    "ae01.alicdn.com",
-    "www.92424.cn",
-    "k.wudejia.com",
-    "vivovip.mmszxc.top",
-    "qiu.xixiqiu.com",
-    "cdnjs.hnfenxun.com",
-    "cms.qdwght.com"
+    "mimg.0c1q0l.cn","www.googletagmanager.com","www.google-analytics.com","mc.usihnbcq.cn","mg.g1mm3d.cn","mscs.svaeuzh.cn","cnzz.hhttm.top","tp.vinuxhome.com","cnzz.mmstat.com","www.baihuillq.com","s23.cnzz.com","z3.cnzz.com","c.cnzz.com","stj.v1vo.top","z12.cnzz.com","img.mosflower.cn","tips.gamevvip.com","ehwe.yhdtns.com","xdn.cqqc3.com","www.jixunkyy.cn","sp.chemacid.cn","hm.baidu.com","s9.cnzz.com","z6.cnzz.com","um.cavuc.com","mav.mavuz.com","wofwk.aoidf3.com","z5.cnzz.com","xc.hubeijieshikj.cn","tj.tianwenhu.com","xg.gars57.cn","k.jinxiuzhilv.com","cdn.bootcss.com","ppl.xunzhuo123.com","xomk.jiangjunmh.top","img.xunzhuo123.com","z1.cnzz.com","s13.cnzz.com","xg.huataisangao.cn","z7.cnzz.com","z2.cnzz.com","s96.cnzz.com","q11.cnzz.com","thy.dacedsfa.cn","xg.whsbpw.cn","s19.cnzz.com","z8.cnzz.com","s4.cnzz.com","f5w.as12df.top","ae01.alicdn.com","www.92424.cn","k.wudejia.com","vivovip.mmszxc.top","qiu.xixiqiu.com","cdnjs.hnfenxun.com","cms.qdwght.com"
   ]
-  }
-
-
-
-
+}
