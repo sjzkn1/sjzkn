@@ -310,6 +310,16 @@
       ]
     },
     {
+      "key": "幸福加油站",
+      "name": "幸福加油站🔞",
+      "type": 3,
+      "api": "https://你的直链地址/幸福加油站.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
       "key": "jin",
       "name": "靳先生，长期维护 ",
       "type": 1,
