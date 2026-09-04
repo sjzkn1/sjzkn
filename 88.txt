@@ -313,7 +313,7 @@
       "key": "幸福加油站",
       "name": "幸福加油站🔞",
       "type": 3,
-      "api": "https://你的直链地址/幸福加油站.py",
+      "api": "https://188.sjzkn1.tk/py/%E5%B9%B8%E7%A6%8F%E5%8A%A0%E6%B2%B9%E7%AB%99%F0%9F%94%9E.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
