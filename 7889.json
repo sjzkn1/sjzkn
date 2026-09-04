@@ -1,14 +1,13 @@
 {
   "sites": [
     {
-      "key": "幸福加油站",
+      "key": "xyjz",
       "name": "幸福加油站🔞",
-      "type": 3,
-      "api": "csp_XBPQ",
+      "type": 4,
+      "api": "./spider/幸福加油站🔞.py",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 0,
-      "ext": "https://你的服务器地址/幸福加油站🔞.py"
+      "filterable": 0
     }
   ]
 }
