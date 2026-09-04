@@ -309,16 +309,276 @@
         "台湾剧"
       ]
     },
-    {
-      "key": "幸福加油站",
-      "name": "幸福加油站🔞",
+{
+      "key": "4K影视",
+      "name": "4K影视",
       "type": 3,
-      "api": "https://188.sjzkn1.tk/py/%E5%B9%B8%E7%A6%8F%E5%8A%A0%E6%B2%B9%E7%AB%99%F0%9F%94%9E.py",
+      "api": "https://188.sjzkn1.tk/py/4K%E5%BD%B1%E8%A7%86.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "30剧集网",
+      "name": "30剧集网🍀",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/30%E5%89%A7%E9%9B%86%E7%BD%91%F0%9F%8D%80TG%20%40hshsjk9.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
       "changeable": 0
     },
+    {
+      "key": "八戒影视",
+      "name": "八戒影视🍀",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%85%AB%E6%88%92%E5%BD%B1%E8%A7%86%F0%9F%8D%80TG%20%40hshsjk9.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
+      "key": "八天电影",
+      "name": "八天电影",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%85%AB%E5%A4%A9%E7%94%B5%E5%BD%B1.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "哔哩直播",
+      "name": "哔哩直播",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%93%94%E5%93%A9%E7%9B%B4%E6%92%AD.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
+      "key": "草莓影视",
+      "name": "草莓影视🍀",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E8%8D%89%E8%8E%93%E5%BD%B1%E8%A7%86%F0%9F%8D%80TG%20%40hshsjk9.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
+      "key": "初见影视",
+      "name": "初见影视",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%88%9D%E8%A7%81%E5%BD%B1%E8%A7%86.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "大马猴",
+      "name": "大马猴🍀",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%A4%A7%E9%A9%AC%E7%8C%B4%F0%9F%8D%80TG%20%40hshsjk9.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
+      "key": "袋鼠影视",
+      "name": "袋鼠影视",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E8%A2%8B%E9%BC%A0%E5%BD%B1%E8%A7%86.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
+      "key": "蝶卡影视",
+      "name": "蝶卡影视",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E8%9D%B6%E5%8D%A1%E5%BD%B1%E8%A7%86.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "豆花影视",
+      "name": "豆花影视",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E8%B1%86%E8%8A%B1%E5%BD%B1%E8%A7%86.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "毒舌短剧",
+      "name": "毒舌短剧🍀",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E6%AF%92%E8%88%8C%E7%9F%AD%E5%89%A7%F0%9F%8D%80TG%20%40hshsjk9.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "毒舌影视",
+      "name": "毒舌影视",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E6%AF%92%E8%88%8C%E5%BD%B1%E8%A7%86.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
+      "key": "短剧巴士",
+      "name": "短剧巴士",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E7%9F%AD%E5%89%A7%E5%B7%B4%E5%A3%AB.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "短剧聚合",
+      "name": "短剧聚合",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E7%9F%AD%E5%89%A7%E8%81%9A%E5%90%88.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "枫叶4K",
+      "name": "枫叶4K",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E6%9E%AB%E5%8F%B64K.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "瓜子APP",
+      "name": "瓜子APP",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E7%93%9C%E5%AD%90APP.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "河马剧场",
+      "name": "河马剧场",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E6%B2%B3%E9%A9%AC%E5%89%A7%E5%9C%BA.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
+      "key": "剧下饭4K",
+      "name": "剧下饭4K🍀",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%89%A7%E4%B8%8B%E9%A5%AD4K%F0%9F%8D%80TG%20%40hshsjk9.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
+      "key": "聚合直播",
+      "name": "聚合直播",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E8%81%9A%E5%90%88%E7%9B%B4%E6%92%AD.py",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "农民影视",
+      "name": "农民影视",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%86%9C%E6%B0%91%E5%BD%B1%E8%A7%86.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
+      "key": "刷不停短剧",
+      "name": "刷不停短剧🍀",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%88%B7%E4%B8%8D%E5%81%9C%E7%9F%AD%E5%89%A7%F0%9F%8D%80TG%20%40hshsjk9.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
+      "key": "腾爱优芒B",
+      "name": "腾爱优芒B🍀",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E8%85%BE%E7%88%B1%E4%BC%98%E8%8A%92B%F0%9F%8D%80TG%20%40hshsjk9.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "悟圣短剧",
+      "name": "悟圣短剧",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E6%82%9F%E5%9C%A3%E7%9F%AD%E5%89%A7.py",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
+      "key": "星芽短剧",
+      "name": "星芽短剧",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E6%98%9F%E8%8A%BD%E7%9F%AD%E5%89%A7.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
+    {
+      "key": "映刻短剧",
+      "name": "映刻短剧🍀",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E6%98%A0%E5%88%BB%E7%9F%AD%E5%89%A7%F0%9F%8D%80TG%20%40hshsjk9.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "宅男影视",
+      "name": "宅男影视🍀",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%AE%85%E7%94%B7%E5%BD%B1%E8%A7%86%F0%9F%8D%80TG%20%40hshsjk9.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    }
     {
       "key": "jin",
       "name": "靳先生，长期维护 ",
