@@ -1,9 +1,9 @@
 {
   "sites": [
-   {
+    {
       "key": "幸福加油站",
       "name": "幸福加油站🔞",
-      "type": 1,
+      "type": 3,
       "api": "https://188.sjzkn1.tk/py/%E5%B9%B8%E7%A6%8F%E5%8A%A0%E6%B2%B9%E7%AB%99%F0%9F%94%9E.py",
       "searchable": 1,
       "quickSearch": 1,
@@ -11,489 +11,489 @@
       "changeable": 0
     },
     {
-    "key": "91porn",
-    "name": "91porn🔞",
-    "type": 2,
-    "api": "https://188.sjzkn1.tk/py/91porn.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "91porn",
+      "name": "91porn🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/91porn.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "91porna",
-    "name": "91porna🔞",
-    "type": 3,
-    "api": "https://188.sjzkn1.tk/py/91porna%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "91porna",
+      "name": "91porna🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/91porna%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "91Porn蝌蚪窝",
-    "name": "91Porn蝌蚪窝🔞",
-    "type": 4,
-    "api": "https://188.sjzkn1.tk/py/91Porn%E8%9C%97%E8%9A%A7%E7%AA%9D.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "91Porn蝌蚪窝",
+      "name": "91Porn蝌蚪窝🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/91Porn%E8%9C%97%E8%9A%A7%E7%AA%9D.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "91爆料",
-    "name": "91爆料🔞",
-    "type": 5,
-    "api": "https://188.sjzkn1.tk/py/91%E7%88%86%E6%96%99.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "91爆料",
+      "name": "91爆料🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/91%E7%88%86%E6%96%99.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "91吃瓜中心",
-    "name": "91吃瓜中心🔞",
-    "type": 6,
-    "api": "https://188.sjzkn1.tk/py/91%E5%90%83%E7%93%9C%E4%B8%AD%E5%BF%83.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "91吃瓜中心",
+      "name": "91吃瓜中心🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/91%E5%90%83%E7%93%9C%E4%B8%AD%E5%BF%83.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "91大赛",
-    "name": "91大赛🔞",
-    "type": 7,
-    "api": "https://188.sjzkn1.tk/py/91%E5%A4%A7%E8%B5%9B.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "91大赛",
+      "name": "91大赛🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/91%E5%A4%A7%E8%B5%9B.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "91热爆",
-    "name": "91热爆🔞",
-    "type": 8,
-    "api": "https://188.sjzkn1.tk/py/91%E7%83%AD%E7%88%86%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "91热爆",
+      "name": "91热爆🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/91%E7%83%AD%E7%88%86%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "AdultpornaAV",
-    "name": "AdultpornaAV🔞",
-    "type": 9,
-    "api": "https://188.sjzkn1.tk/py/AdultpornaAV.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "AdultpornaAV",
+      "name": "AdultpornaAV🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/AdultpornaAV.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "av3698",
-    "name": "av3698🔞",
-    "type": 10,
-    "api": "https://188.sjzkn1.tk/py/av3698%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "av3698",
+      "name": "av3698🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/av3698%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "GG51",
-    "name": "GG51🔞",
-    "type": 11,
-    "api": "https://188.sjzkn1.tk/py/GG51%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "GG51",
+      "name": "GG51🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/GG51%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "Jable",
-    "name": "Jable🔞",
-    "type": 12,
-    "api": "https://188.sjzkn1.tk/py/Jable.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "Jable",
+      "name": "Jable🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/Jable.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "PigAV",
-    "name": "PigAV🔞",
-    "type": 13,
-    "api": "https://188.sjzkn1.tk/py/PigAV.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "PigAV",
+      "name": "PigAV🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/PigAV.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "TnAflix",
-    "name": "TnAflix🔞",
-    "type": 14,
-    "api": "https://188.sjzkn1.tk/py/TnAflix%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "TnAflix",
+      "name": "TnAflix🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/TnAflix%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "UAA",
-    "name": "UAA🔞",
-    "type": 15,
-    "api": "https://188.sjzkn1.tk/py/UAA%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "UAA",
+      "name": "UAA🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/UAA%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "VV视频",
-    "name": "VV视频🔞",
-    "type": 16,
-    "api": "https://188.sjzkn1.tk/py/VV%E8%A7%86%E9%A2%91%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "VV视频",
+      "name": "VV视频🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/VV%E8%A7%86%E9%A2%91%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "百合TV",
-    "name": "百合TV🔞",
-    "type": 17,
-    "api": "https://188.sjzkn1.tk/py/%E7%99%BE%E5%90%88TV%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "百合TV",
+      "name": "百合TV🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E7%99%BE%E5%90%88TV%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "爆色",
-    "name": "爆色🔞",
-    "type": 18,
-    "api": "https://188.sjzkn1.tk/py/%E7%88%86%E8%89%B2%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "爆色",
+      "name": "爆色🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E7%88%86%E8%89%B2%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "采集聚合成人",
-    "name": "采集聚合成人🔞",
-    "type": 19,
-    "api": "https://188.sjzkn1.tk/py/%E9%87%87%E9%9B%86%E8%81%9A%E5%90%88%E6%88%90%E4%BA%BA.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "采集聚合成人",
+      "name": "采集聚合成人🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E9%87%87%E9%9B%86%E8%81%9A%E5%90%88%E6%88%90%E4%BA%BA.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "妲己",
-    "name": "妲己🔞",
-    "type": 20,
-    "api": "https://188.sjzkn1.tk/py/%E5%A6%B2%E5%B7%B1.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "妲己",
+      "name": "妲己🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%A6%B2%E5%B7%B1.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "大鸡吧",
-    "name": "大鸡吧🔞",
-    "type": 21,
-    "api": "https://188.sjzkn1.tk/py/%E5%A4%A7%E9%B8%A1%E5%90%A7%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "大鸡吧",
+      "name": "大鸡吧🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%A4%A7%E9%B8%A1%E5%90%A7%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "福利天堂",
-    "name": "福利天堂🔞",
-    "type": 22,
-    "api": "https://188.sjzkn1.tk/py/%E7%A6%8F%E5%88%A9%E5%A4%A9%E5%A0%82.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "福利天堂",
+      "name": "福利天堂🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E7%A6%8F%E5%88%A9%E5%A4%A9%E5%A0%82.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "海角乱伦",
-    "name": "海角乱伦🔞",
-    "type": 23,
-    "api": "https://188.sjzkn1.tk/py/%E6%B5%B7%E8%A7%92%E4%B9%B1%E4%BC%A6%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "海角乱伦",
+      "name": "海角乱伦🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E6%B5%B7%E8%A7%92%E4%B9%B1%E4%BC%A6%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "韩国色情电影",
-    "name": "韩国色情电影🔞",
-    "type": 24,
-    "api": "https://188.sjzkn1.tk/py/%E9%9F%A9%E5%9B%BD%E8%89%B2%E6%83%85%E7%94%B5%E5%BD%B1.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "韩国色情电影",
+      "name": "韩国色情电影🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E9%9F%A9%E5%9B%BD%E8%89%B2%E6%83%85%E7%94%B5%E5%BD%B1.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "黑料不打烊",
-    "name": "黑料不打烊🔞",
-    "type": 25,
-    "api": "https://188.sjzkn1.tk/py/%E9%BB%91%E6%96%99%E4%B8%8D%E6%89%93%E7%83%8A.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "黑料不打烊",
+      "name": "黑料不打烊🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E9%BB%91%E6%96%99%E4%B8%8D%E6%89%93%E7%83%8A.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "黑料网",
-    "name": "黑料网🔞",
-    "type": 26,
-    "api": "https://188.sjzkn1.tk/py/%E9%BB%91%E6%96%99%E7%BD%91.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "黑料网",
+      "name": "黑料网🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E9%BB%91%E6%96%99%E7%BD%91.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "黄色仓库动态版",
-    "name": "黄色仓库动态版🔞",
-    "type": 27,
-    "api": "https://188.sjzkn1.tk/py/%E9%BB%84%E8%89%B2%E4%BB%93%E5%BA%93%E5%8A%A8%E6%80%81%E7%89%88.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "黄色仓库动态版",
+      "name": "黄色仓库动态版🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E9%BB%84%E8%89%B2%E4%BB%93%E5%BA%93%E5%8A%A8%E6%80%81%E7%89%88.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "撸王宝典",
-    "name": "撸王宝典🔞",
-    "type": 28,
-    "api": "https://188.sjzkn1.tk/py/%E6%92%B8%E7%8E%8B%E5%AE%9D%E5%85%B8%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "撸王宝典",
+      "name": "撸王宝典🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E6%92%B8%E7%8E%8B%E5%AE%9D%E5%85%B8%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "麻豆社",
-    "name": "麻豆社🔞",
-    "type": 29,
-    "api": "https://188.sjzkn1.tk/py/%E9%BA%BB%E8%B1%86%E7%A4%BE.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "麻豆社",
+      "name": "麻豆社🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E9%BA%BB%E8%B1%86%E7%A4%BE.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "蜜桃AV",
-    "name": "蜜桃AV🔞",
-    "type": 30,
-    "api": "https://188.sjzkn1.tk/py/%E8%9C%9C%E6%A1%83AV%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "蜜桃AV",
+      "name": "蜜桃AV🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E8%9C%9C%E6%A1%83AV%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "蜜桃视频",
-    "name": "蜜桃视频🔞",
-    "type": 31,
-    "api": "https://188.sjzkn1.tk/py/%E8%9C%9C%E6%A1%83%E8%A7%86%E9%A2%91.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "蜜桃视频",
+      "name": "蜜桃视频🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E8%9C%9C%E6%A1%83%E8%A7%86%E9%A2%91.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "陌陌一夜情",
-    "name": "陌陌一夜情🔞",
-    "type": 32,
-    "api": "https://188.sjzkn1.tk/py/%E9%99%8C%E9%99%8C%E4%B8%80%E5%A4%9C%E6%83%85%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "陌陌一夜情",
+      "name": "陌陌一夜情🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E9%99%8C%E9%99%8C%E4%B8%80%E5%A4%9C%E6%83%85%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "奶糖视频",
-    "name": "奶糖视频🔞",
-    "type": 33,
-    "api": "https://188.sjzkn1.tk/py/%E5%A5%B6%E7%B3%96%E8%A7%86%E9%A2%91%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "奶糖视频",
+      "name": "奶糖视频🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%A5%B6%E7%B3%96%E8%A7%86%E9%A2%91%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "男同网",
-    "name": "男同网🔞",
-    "type": 34,
-    "api": "https://188.sjzkn1.tk/py/%E7%94%B7%E5%90%8C%E7%BD%91.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "男同网",
+      "name": "男同网🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E7%94%B7%E5%90%8C%E7%BD%91.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "糯米短剧",
-    "name": "糯米短剧🔞",
-    "type": 36,
-    "api": "https://188.sjzkn1.tk/py/%E7%B3%AF%E7%B1%B3%E7%9F%AD%E5%89%A7.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "糯米短剧",
+      "name": "糯米短剧🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E7%B3%AF%E7%B1%B3%E7%9F%AD%E5%89%A7.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "权色视频",
-    "name": "权色视频🔞",
-    "type": 36,
-    "api": "https://188.sjzkn1.tk/py/%E6%9D%83%E8%89%B2%E8%A7%86%E9%A2%91%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "权色视频",
+      "name": "权色视频🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E6%9D%83%E8%89%B2%E8%A7%86%E9%A2%91%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "肉视频",
-    "name": "肉视频🔞",
-    "type": 37,
-    "api": "https://188.sjzkn1.tk/py/%E8%82%89%E8%A7%86%E9%A2%91%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "肉视频",
+      "name": "肉视频🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E8%82%89%E8%A7%86%E9%A2%91%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "色播聚合",
-    "name": "色播聚合🔞",
-    "type": 38,
-    "api": "https://188.sjzkn1.tk/py/%E8%89%B2%E6%92%AD%E8%81%9A%E5%90%88.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "色播聚合",
+      "name": "色播聚合🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E8%89%B2%E6%92%AD%E8%81%9A%E5%90%88.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "善良的小姨子",
-    "name": "善良的小姨子🔞",
-    "type": 39,
-    "api": "https://188.sjzkn1.tk/py/%E5%96%84%E8%89%AF%E7%9A%84%E5%B0%8F%E5%A7%A8%E5%AD%90%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "善良的小姨子",
+      "name": "善良的小姨子🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%96%84%E8%89%AF%E7%9A%84%E5%B0%8F%E5%A7%A8%E5%AD%90%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "手鸡助手",
-    "name": "手鸡助手🔞",
-    "type": 40,
-    "api": "https://188.sjzkn1.tk/py/%E6%89%8B%E9%B8%A1%E5%8A%A9%E6%89%8B%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "手鸡助手",
+      "name": "手鸡助手🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E6%89%8B%E9%B8%A1%E5%8A%A9%E6%89%8B%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "丝袜乐土",
-    "name": "丝袜乐土🔞",
-    "type": 41,
-    "api": "https://188.sjzkn1.tk/py/%E4%B8%9D%E8%A2%9C%E4%B9%90%E5%9C%9F%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "丝袜乐土",
+      "name": "丝袜乐土🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E4%B8%9D%E8%A2%9C%E4%B9%90%E5%9C%9F%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "四虎视频",
-    "name": "四虎视频🔞",
-    "type": 42,
-    "api": "https://188.sjzkn1.tk/py/%E5%9B%9B%E8%99%8E%E8%A7%86%E9%A2%91.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "四虎视频",
+      "name": "四虎视频🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%9B%9B%E8%99%8E%E8%A7%86%E9%A2%91.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "四色",
-    "name": "四色🔞",
-    "type": 43,
-    "api": "https://188.sjzkn1.tk/py/%E5%9B%9B%E8%89%B2%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "四色",
+      "name": "四色🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%9B%9B%E8%89%B2%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "香肠派对",
-    "name": "香肠派对🔞",
-    "type": 44,
-    "api": "https://188.sjzkn1.tk/py/%E9%A6%99%E8%82%A0%E6%B4%BE%E5%AF%B9.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "香肠派对",
+      "name": "香肠派对🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E9%A6%99%E8%82%A0%E6%B4%BE%E5%AF%B9.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "香蕉视频",
-    "name": "香蕉视频🔞",
-    "type": 45,
-    "api": "https://188.sjzkn1.tk/py/%E9%A6%99%E8%95%89%E8%A7%86%E9%A2%91.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "香蕉视频",
+      "name": "香蕉视频🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E9%A6%99%E8%95%89%E8%A7%86%E9%A2%91.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "小心御欲",
-    "name": "小心御欲🔞",
-    "type": 46,
-    "api": "https://188.sjzkn1.tk/py/%E5%B0%8F%E5%BF%83%E5%BE%A1%E6%AC%B2%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "小心御欲",
+      "name": "小心御欲🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E5%B0%8F%E5%BF%83%E5%BE%A1%E6%AC%B2%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "性运机场",
-    "name": "性运机场🔞",
-    "type": 47,
-    "api": "https://188.sjzkn1.tk/py/%E6%80%A7%E8%BF%90%E6%9C%BA%E5%9C%BA%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "性运机场",
+      "name": "性运机场🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E6%80%A7%E8%BF%90%E6%9C%BA%E5%9C%BA%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "淫母原味",
-    "name": "淫母原味🔞",
-    "type": 48,
-    "api": "https://188.sjzkn1.tk/py/%E6%B7%AB%E6%AF%8D%E5%8E%9F%E5%91%B3%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
+      "key": "淫母原味",
+      "name": "淫母原味🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E6%B7%AB%E6%AF%8D%E5%8E%9F%E5%91%B3%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
-    "key": "优质粉嫩鲍",
-    "name": "优质粉嫩鲍🔞",
-    "type": 49,
-    "api": "https://188.sjzkn1.tk/py/%E4%BC%98%E8%B4%A8%E7%B2%89%E5%AB%A9%E9%B2%8D%F0%9F%94%9E.py",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "changeable": 0
-    }
+      "key": "优质粉嫩鲍",
+      "name": "优质粉嫩鲍🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E4%BC%98%E8%B4%A8%E7%B2%89%E5%AB%A9%E9%B2%8D%F0%9F%94%9E.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
+    },
     {
       "key": "jin",
       "name": "靳先生，长期维护 ",
-      "type": 50,
+      "type": 1,
       "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/jos",
       "searchable": 1,
       "quickSearch": 1,
@@ -536,161 +536,41 @@
     {
       "group": "软解码",
       "options": [
-        {
-          "category": 4,
-          "name": "opensles",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "overlay-format",
-          "value": "842225234"
-        },
-        {
-          "category": 4,
-          "name": "framedrop",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "soundtouch",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "start-on-prepared",
-          "value": "1"
-        },
-        {
-          "category": 1,
-          "name": "http-detect-range-support",
-          "value": "0"
-        },
-        {
-          "category": 1,
-          "name": "fflags",
-          "value": "fastseek"
-        },
-        {
-          "category": 2,
-          "name": "skip_loop_filter",
-          "value": "48"
-        },
-        {
-          "category": 4,
-          "name": "reconnect",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "max-buffer-size",
-          "value": "5242880"
-        },
-        {
-          "category": 4,
-          "name": "enable-accurate-seek",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-auto-rotate",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-handle-resolution-change",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-hevc",
-          "value": "0"
-        }
+        {"category": 4, "name": "opensles", "value": "0"},
+        {"category": 4, "name": "overlay-format", "value": "842225234"},
+        {"category": 4, "name": "framedrop", "value": "1"},
+        {"category": 4, "name": "soundtouch", "value": "1"},
+        {"category": 4, "name": "start-on-prepared", "value": "1"},
+        {"category": 1, "name": "http-detect-range-support", "value": "0"},
+        {"category": 1, "name": "fflags", "value": "fastseek"},
+        {"category": 2, "name": "skip_loop_filter", "value": "48"},
+        {"category": 4, "name": "reconnect", "value": "1"},
+        {"category": 4, "name": "max-buffer-size", "value": "5242880"},
+        {"category": 4, "name": "enable-accurate-seek", "value": "0"},
+        {"category": 4, "name": "mediacodec", "value": "0"},
+        {"category": 4, "name": "mediacodec-auto-rotate", "value": "0"},
+        {"category": 4, "name": "mediacodec-handle-resolution-change", "value": "0"},
+        {"category": 4, "name": "mediacodec-hevc", "value": "0"}
       ]
     },
     {
       "group": "硬解码",
       "options": [
-        {
-          "category": 4,
-          "name": "opensles",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "overlay-format",
-          "value": "842225234"
-        },
-        {
-          "category": 4,
-          "name": "framedrop",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "soundtouch",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "start-on-prepared",
-          "value": "1"
-        },
-        {
-          "category": 1,
-          "name": "http-detect-range-support",
-          "value": "0"
-        },
-        {
-          "category": 1,
-          "name": "fflags",
-          "value": "fastseek"
-        },
-        {
-          "category": 2,
-          "name": "skip_loop_filter",
-          "value": "48"
-        },
-        {
-          "category": 4,
-          "name": "reconnect",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "max-buffer-size",
-          "value": "5242880"
-        },
-        {
-          "category": 4,
-          "name": "enable-accurate-seek",
-          "value": "0"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-auto-rotate",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-handle-resolution-change",
-          "value": "1"
-        },
-        {
-          "category": 4,
-          "name": "mediacodec-hevc",
-          "value": "1"
-        }
+        {"category": 4, "name": "opensles", "value": "0"},
+        {"category": 4, "name": "overlay-format", "value": "842225234"},
+        {"category": 4, "name": "framedrop", "value": "1"},
+        {"category": 4, "name": "soundtouch", "value": "1"},
+        {"category": 4, "name": "start-on-prepared", "value": "1"},
+        {"category": 1, "name": "http-detect-range-support", "value": "0"},
+        {"category": 1, "name": "fflags", "value": "fastseek"},
+        {"category": 2, "name": "skip_loop_filter", "value": "48"},
+        {"category": 4, "name": "reconnect", "value": "1"},
+        {"category": 4, "name": "max-buffer-size", "value": "5242880"},
+        {"category": 4, "name": "enable-accurate-seek", "value": "0"},
+        {"category": 4, "name": "mediacodec", "value": "1"},
+        {"category": 4, "name": "mediacodec-auto-rotate", "value": "1"},
+        {"category": 4, "name": "mediacodec-handle-resolution-change", "value": "1"},
+        {"category": 4, "name": "mediacodec-hevc", "value": "1"}
       ]
     }
   ],
@@ -753,7 +633,4 @@
     "cdnjs.hnfenxun.com",
     "cms.qdwght.com"
   ]
-  }
-
-
-
+}
