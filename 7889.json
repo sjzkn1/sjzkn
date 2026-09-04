@@ -1,64 +1,14 @@
 {
   "sites": [
     {
-      "key": "py_FreeOK",
-      "name": "FreeOK",
+      "key": "幸福加油站",
+      "name": "幸福加油站🔞",
       "type": 3,
-      "api": "csp_FreeOK",
+      "api": "csp_XBPQ",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1,
-      "ext": "https://ghproxy.net/https://raw.githubusercontent.com/sjzkn1/sjzkn/main/py/幸福加油站🔞.py"
-    },
-    {
-      "key": "py_剧OK",
-      "name": "剧OK",
-      "type": 3,
-      "api": "csp_剧OK",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "https://cdn.jsdelivr.net/gh/sjzkn1/sjzkn@main/py/%E5%89%A7OK.py"
-    },
-    {
-      "key": "py_4K影视",
-      "name": "4K影视",
-      "type": 3,
-      "api": "csp_4K影视",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "https://ghproxy.net/https://raw.githubusercontent.com/sjzkn1/sjzkn/main/py/4K影视.py"
-    },
-    {
-      "key": "py_低端影视",
-      "name": "低端影视",
-      "type": 3,
-      "api": "csp_低端影视",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "https://ghproxy.net/https://raw.githubusercontent.com/sjzkn1/sjzkn/main/py/低端影视.py"
-    },
-    {
-      "key": "py_七猫影视",
-      "name": "七猫影视",
-      "type": 3,
-      "api": "csp_七猫影视",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "https://ghproxy.net/https://raw.githubusercontent.com/sjzkn1/sjzkn/main/py/七猫影视.py"
-    },
-    {
-      "key": "py_Auete影视",
-      "name": "Auete影视",
-      "type": 3,
-      "api": "csp_Auete影视",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "https://ghproxy.net/https://raw.githubusercontent.com/sjzkn1/sjzkn/main/py/Auete影视🍀TG%20@hshsjk9.py"
+      "filterable": 0,
+      "ext": "https://你的服务器地址/幸福加油站🔞.py"
     }
   ]
 }
