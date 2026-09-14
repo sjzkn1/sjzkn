@@ -9,6 +9,7 @@ https://raw.githubusercontent.com/Hidashimora/free-vpn-anti-rkn/main/configs/1.2
 # 周润发
 https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml
 # 周润发2
+https://gcore.jsdelivr.net/gh/aews/jd/v20911.txt
 https://sub.445569.xyz/
 # 裤老
 https://sub.maflya.com/
