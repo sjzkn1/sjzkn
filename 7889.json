@@ -11,13 +11,13 @@
       "changeable": 0
     },
     {
-      "key": "huangguo",
-      "name": "黄果短剧",
-      "type": 1,
-      "api": "https://duanjupachong.pages.dev/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0
+    "key": "huangguo",
+    "name": "黄果短剧",
+    "type": 1,
+    "api": "https://duanjupachong.pages.dev/",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 0
     },
     {
       "key": "91porn",
