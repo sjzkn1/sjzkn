@@ -1,13 +1,15 @@
 {
   "sites": [
     {
-  "key": "huangguo1",
-  "name": "黄果短剧js",
-  "type": 3,
-  "api": "https://little-waterfall-ea20.sjzkn886.workers.dev/",
-  "searchable": 1,
-  "quickSearch": 1,
-  "filterable": 0
+      "key": "1huangguo",
+      "name": "黄果短剧js",
+      "type": 3,
+      "api": "csp_Js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0,
+      "ext": "https://little-waterfall-ea20.sjzkn886.workers.dev/"
     },
     {
       "key": "幸福加油站",
