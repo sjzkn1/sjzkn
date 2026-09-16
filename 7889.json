@@ -17,7 +17,9 @@
     "api": "https://duanjupachong.pages.dev/",
     "searchable": 1,
     "quickSearch": 1,
-    "filterable": 0
+    "filterable": 0,
+    "playerType": 1,
+    "timeout": 30
     },
     {
       "key": "91porn",
