@@ -1,6 +1,15 @@
 {
   "sites": [
     {
+  "key": "huangguo1",
+  "name": "黄果短剧js",
+  "type": 3,
+  "api": "https://duanjupachong.pages.dev/huangguo.js",
+  "searchable": 1,
+  "quickSearch": 1,
+  "filterable": 0
+    },
+    {
       "key": "幸福加油站",
       "name": "幸福加油站🔞",
       "type": 3,
