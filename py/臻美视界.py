@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
 """
-臻美视界 - OK影视 Python 点播源（优化版）
-- 封面使用直链（兼容 5.16，避免 proxy 图全不显示）
-- 播放解析 master m3u8 直出子流，加快起播
-- Session 复用 + 精简请求
+臻美视界 - OK影视 Python 点播源
+原 Cloudflare Worker 逻辑移植
 站点: https://ommjs4.xxsxlz.top
+API 响应 AES-CBC 解密 (key/iv 固定)
 """
 
 import base64
 import json
 import re
 import sys
-from urllib.parse import quote, urljoin, urlparse
+from urllib.parse import quote
 
 sys.path.append("..")
 try:
@@ -58,23 +57,11 @@ class Spider(Spider):
             "Accept": "application/json,text/html,*/*",
             "Origin": self.HOST,
         }
-        self.media_headers = {
-            "User-Agent": self.headers["User-Agent"],
-            "Referer": self.HOST + "/",
-            "Origin": self.HOST,
-            "Accept": "*/*",
-        }
         try:
             import requests
             self.session = requests.Session()
             self.session.headers.update(self.headers)
             self.session.verify = False
-            # 连接复用，减少握手
-            adapter = requests.adapters.HTTPAdapter(
-                pool_connections=8, pool_maxsize=16, max_retries=1
-            )
-            self.session.mount("https://", adapter)
-            self.session.mount("http://", adapter)
         except Exception:
             self.session = None
 
@@ -91,25 +78,24 @@ class Spider(Spider):
     #  内部工具
     # ------------------------------------------------------------------
 
-    def _fetch(self, path, timeout=12):
+    def _fetch(self, path):
         url = self.HOST + "/api" + path
         text = ""
         if self.session:
             try:
-                r = self.session.get(url, timeout=timeout)
+                r = self.session.get(url, timeout=15)
                 if r.status_code == 200:
                     text = r.text
             except Exception:
                 pass
         if not text:
             try:
-                import urllib.request
-                import ssl
+                import urllib.request, ssl
                 ctx = ssl.create_default_context()
                 ctx.check_hostname = False
                 ctx.verify_mode = ssl.CERT_NONE
                 req = urllib.request.Request(url, headers=self.headers)
-                with urllib.request.urlopen(req, context=ctx, timeout=timeout) as resp:
+                with urllib.request.urlopen(req, context=ctx, timeout=15) as resp:
                     text = resp.read().decode("utf-8", errors="replace")
             except Exception:
                 return None
@@ -129,6 +115,7 @@ class Spider(Spider):
         except Exception:
             return None
         plain = None
+        # 优先 cryptography
         try:
             from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
             from cryptography.hazmat.backends import default_backend
@@ -146,6 +133,7 @@ class Spider(Spider):
                 plain = AES.new(self.API_KEY, AES.MODE_CBC, self.API_IV).decrypt(raw)
             except Exception:
                 return None
+        # PKCS7 unpad
         if plain:
             n = plain[-1] if isinstance(plain[-1], int) else ord(plain[-1])
             if 1 <= n <= 16:
@@ -154,37 +142,6 @@ class Spider(Spider):
             return json.loads(plain.decode("utf-8", errors="replace"))
         except Exception:
             return None
-
-    def _get_bytes(self, url, timeout=12):
-        """拉取图片/媒体原始内容"""
-        if self.session:
-            try:
-                r = self.session.get(
-                    url, headers=self.media_headers, timeout=timeout, stream=False
-                )
-                if r.status_code == 200 and r.content:
-                    return r.content, r.headers.get("Content-Type", "")
-            except Exception:
-                pass
-        try:
-            import urllib.request
-            import ssl
-            ctx = ssl.create_default_context()
-            ctx.check_hostname = False
-            ctx.verify_mode = ssl.CERT_NONE
-            req = urllib.request.Request(url, headers=self.media_headers)
-            with urllib.request.urlopen(req, context=ctx, timeout=timeout) as resp:
-                body = resp.read()
-                ctype = resp.headers.get("Content-Type", "")
-                return body, ctype
-        except Exception:
-            return b"", ""
-
-    def _get_text(self, url, timeout=10):
-        body, _ = self._get_bytes(url, timeout=timeout)
-        if not body:
-            return ""
-        return body.decode("utf-8", errors="replace")
 
     @staticmethod
     def _clean(text):
@@ -201,86 +158,21 @@ class Spider(Spider):
         )
         return re.sub(r"\s+", " ", text).strip()
 
-    def _pic(self, url):
-        """封面直链（5.16 等版本 proxy 图容易全挂，改直链）"""
-        if not url:
-            return ""
-        url = str(url).strip()
-        if url.startswith("//"):
-            url = "https:" + url
-        if not url.startswith("http"):
-            return url
-        # 去掉无意义查询参数，部分播放器对 ?t= 不友好
-        url = re.sub(r"[?&](t|v|token)=[^&]*", "", url)
-        url = url.replace("?&", "?").rstrip("?&")
-        # 已知图床备用域名（主域失败时部分环境可解析备用）
-        # 仅做轻量替换，不改变路径
-        replacements = {
-            "://fqjpg11.top/": "://fqjpg11.top/",
-            "://thjpg14.vip/": "://thjpg14.vip/",
-            "://sl260908.top/": "://sl260908.top/",
-            "://guzwiayz.com/": "://guzwiayz.com/",
-        }
-        for a, b in replacements.items():
-            if a in url:
-                url = url.replace(a, b, 1)
-                break
-        return url
-
-    def _resolve_m3u8(self, url):
-        """
-        若是 master playlist，解析出第一条子流绝对地址，减少播放器跳转，加快起播。
-        失败则返回原 url。
-        """
-        if not url or ".m3u8" not in url:
-            return url
-        try:
-            text = self._get_text(url, timeout=8)
-            if not text or "#EXTM3U" not in text:
-                return url
-            # 已是媒体列表（有 EXTINF）直接返回
-            if "#EXTINF" in text:
-                return url
-            # 找第一条非注释的相对/绝对 m3u8
-            base = url.rsplit("/", 1)[0] + "/"
-            for line in text.splitlines():
-                s = line.strip()
-                if not s or s.startswith("#"):
-                    continue
-                if ".m3u8" in s or s.endswith("/index.m3u8") or "hls" in s.lower():
-                    return urljoin(url, s)
-                # 也接受无扩展名的子路径
-                if not s.startswith("#"):
-                    return urljoin(url, s)
-        except Exception:
-            pass
-        return url
-
     def _vod(self, item):
         vid = str(item.get("id") or "")
         name = self._clean(item.get("title") or item.get("name") or vid)
         pic = item.get("cover_url") or item.get("pic") or ""
         remarks = ""
         if item.get("hits"):
-            try:
-                h = int(item["hits"])
-                if h >= 10000:
-                    remarks = "%.1fw" % (h / 10000.0)
-                else:
-                    remarks = str(h)
-            except Exception:
-                remarks = str(item["hits"])
+            remarks = "热度{}".format(item["hits"])
         elif item.get("category"):
             remarks = str(item["category"])
         return {
             "vod_id": vid,
             "vod_name": name,
-            "vod_pic": self._pic(pic),
+            "vod_pic": pic,
             "vod_remarks": remarks,
         }
-
-    def _play_header(self):
-        return json.dumps(self.media_headers, ensure_ascii=False)
 
     # ------------------------------------------------------------------
     #  六接口
@@ -291,9 +183,8 @@ class Spider(Spider):
             {"type_id": c["type_id"], "type_name": c["type_name"]}
             for c in self.CATEGORIES
         ]
-        data = self._fetch(
-            "/videos?category_id={}&page=1&ps=18".format(self.CATEGORIES[0]["type_id"])
-        )
+        # 首页取第一个分类前几条做推荐
+        data = self._fetch("/videos?category_id={}&page=1&ps=18".format(self.CATEGORIES[0]["type_id"]))
         videos = []
         if data and isinstance(data.get("data"), dict):
             lst = data["data"].get("list") or []
@@ -301,9 +192,7 @@ class Spider(Spider):
         return {"class": classes, "list": videos}
 
     def homeVideoContent(self):
-        data = self._fetch(
-            "/videos?category_id={}&page=1&ps=30".format(self.CATEGORIES[0]["type_id"])
-        )
+        data = self._fetch("/videos?category_id={}&page=1&ps=30".format(self.CATEGORIES[0]["type_id"]))
         videos = []
         if data and isinstance(data.get("data"), dict):
             lst = data["data"].get("list") or []
@@ -341,7 +230,7 @@ class Spider(Spider):
 
     def detailContent(self, ids):
         vid = str(ids[0] if isinstance(ids, (list, tuple)) else ids)
-        data = self._fetch("/movie?id={}".format(vid), timeout=10)
+        data = self._fetch("/movie?id={}".format(vid))
         if not data or not isinstance(data.get("data"), dict):
             return {"list": []}
         info = data["data"].get("info") or {}
@@ -351,26 +240,18 @@ class Spider(Spider):
         pic = info.get("cover_url") or ""
         play_url = (info.get("play_url") or "").strip()
         cate = info.get("category") or ""
-        remarks = ""
-        if info.get("hits"):
-            try:
-                h = int(info["hits"])
-                remarks = "%.1fw热度" % (h / 10000.0) if h >= 10000 else "%s热度" % h
-            except Exception:
-                remarks = cate
-        else:
-            remarks = cate
+        remarks = "热度{}".format(info["hits"]) if info.get("hits") else cate
+        # 单集直链
         play_from = "臻美视界"
-        # 详情阶段尽量解析出最终可播地址，播放时少一次跳转
         if play_url and play_url.startswith("http"):
-            final = self._resolve_m3u8(play_url)
-            vod_play_url = "正片${}".format(final)
+            vod_play_url = "正片${}".format(play_url)
         else:
+            # 兜底：播放时再解析
             vod_play_url = "正片${}".format(vid)
         vod = {
             "vod_id": vid,
             "vod_name": name,
-            "vod_pic": self._pic(pic),
+            "vod_pic": pic,
             "vod_content": name,
             "vod_remarks": remarks,
             "type_name": cate,
@@ -381,104 +262,58 @@ class Spider(Spider):
 
     def playerContent(self, flag, id, vipFlags):
         play = str(id or "")
-        hdr = self._play_header()
-
-        # 已是直链 → 再解析一次 master，尽量给播放器最终子流
+        # 已经是直链
         if play.startswith("http") and (".m3u8" in play or ".mp4" in play):
-            final = self._resolve_m3u8(play) if ".m3u8" in play else play
             return {
                 "parse": 0,
                 "playUrl": "",
-                "url": final,
-                "header": hdr,
+                "url": play,
+                "header": json.dumps({
+                    "User-Agent": self.headers["User-Agent"],
+                    "Referer": self.HOST + "/",
+                }),
             }
-
-        # 还是 vid，补一次详情
-        data = self._fetch("/movie?id={}".format(play), timeout=10)
+        # 用 id 再请求一次
+        data = self._fetch("/movie?id={}".format(play))
         url = ""
         if data and isinstance(data.get("data"), dict):
             info = data["data"].get("info") or {}
             url = (info.get("play_url") or "").strip()
         if url and url.startswith("http"):
-            final = self._resolve_m3u8(url) if ".m3u8" in url else url
             return {
                 "parse": 0,
                 "playUrl": "",
-                "url": final,
-                "header": hdr,
+                "url": url,
+                "header": json.dumps({
+                    "User-Agent": self.headers["User-Agent"],
+                    "Referer": self.HOST + "/",
+                }),
             }
-        return {"parse": 1, "playUrl": "", "url": play, "header": hdr}
+        return {"parse": 1, "playUrl": "", "url": play}
 
     def searchContent(self, key, quick=False, pg="1"):
+        # 原站搜索接口未在 Worker 中暴露，这里用第一个分类 + 关键词过滤做简单兼容
+        # 若站点后续有 search API 可再扩展
         try:
             page = max(1, int(pg or 1))
         except Exception:
             page = 1
+        # 尝试常见搜索路径
         for path in (
             "/videos?keywords={}&page={}&ps=24".format(quote(key), page),
             "/search?keyword={}&page={}&ps=24".format(quote(key), page),
-            "/videos?category_id=2383&page={}&ps=50&keywords={}".format(
-                page, quote(key)
-            ),
+            "/videos?category_id=2383&page={}&ps=50&keywords={}".format(page, quote(key)),
         ):
             data = self._fetch(path)
             if data and isinstance(data.get("data"), dict):
                 lst = data["data"].get("list") or []
                 if lst:
                     videos = [self._vod(x) for x in lst if isinstance(x, dict)]
+                    # 本地再滤一遍标题
                     kw = key.lower()
-                    filtered = [
-                        v
-                        for v in videos
-                        if kw in (v.get("vod_name") or "").lower()
-                    ]
-                    return {
-                        "list": filtered or videos,
-                        "page": page,
-                        "pagecount": page + 1,
-                        "limit": 24,
-                        "total": 9999,
-                    }
+                    videos = [v for v in videos if kw in (v.get("vod_name") or "").lower()] or videos
+                    return {"list": videos, "page": page, "pagecount": page + 1, "limit": 24, "total": 9999}
         return {"list": []}
 
     def localProxy(self, param):
-        """
-        代理封面图，避免防盗链导致不显示。
-        支持: type=img
-        """
-        try:
-            if isinstance(param, dict):
-                p = param
-            else:
-                p = {}
-                s = str(param or "")
-                if "?" in s:
-                    s = s.split("?", 1)[-1]
-                from urllib.parse import parse_qsl
-                p = dict(parse_qsl(s))
-            typ = (p.get("type") or p.get("do") or "").lower()
-            url = p.get("url") or ""
-            if url:
-                from urllib.parse import unquote
-                url = unquote(url)
-            if not url.startswith("http"):
-                return [404, "text/plain", b"not found"]
-            if typ in ("img", "pic", "image", "py") or not typ:
-                body, ctype = self._get_bytes(url, timeout=12)
-                if not body:
-                    return [404, "text/plain", b"empty"]
-                if not ctype or "text" in ctype:
-                    # 根据后缀猜
-                    low = url.lower()
-                    if ".png" in low:
-                        ctype = "image/png"
-                    elif ".webp" in low:
-                        ctype = "image/webp"
-                    elif ".gif" in low:
-                        ctype = "image/gif"
-                    else:
-                        ctype = "image/jpeg"
-                return [200, ctype, body]
-        except Exception:
-            pass
         return [200, "text/plain", b"ok"]
