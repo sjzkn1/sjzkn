@@ -22,15 +22,14 @@
       "changeable": 0
     },
     {
-    "key": "huangguo",
-    "name": "黄果短剧1",
-    "type": 1,
-    "api": "https://duanjupachong.pages.dev/",
-    "searchable": 1,
-    "quickSearch": 1,
-    "filterable": 0,
-    "playerType": 1,
-    "timeout": 30
+      "key": "huangooudianj",
+      "name": "黄豆短剧🔞",
+      "type": 3,
+      "api": "https://188.sjzkn1.tk/py/%E9%BB%84%E8%B1%86%E7%9F%AD%E5%89%A7.py",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "changeable": 0
     },
     {
       "key": "91porn",
