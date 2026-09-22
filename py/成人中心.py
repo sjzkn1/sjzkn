@@ -445,7 +445,7 @@ class Spider(BaseSpider):
 #   "quickSearch": 0,
 #   "filterable": 0,
 #   "changeable": 0,
-#   "ext": "{\"password\":\"888888\",\"sources_url\":\"https://dingyue.sjzkn.workers.dev/iptv.txt?pwd=888888\"}"
+#   "ext": "{\"password\":\"888888\",\"sources_url\":\"https://188.sjzkn1.tk/00.json\"}"
 # }
 #
 # 使用：进入源 → 搜索框输入 888888 → 显示成人源列表
