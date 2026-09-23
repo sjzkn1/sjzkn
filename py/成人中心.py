@@ -298,22 +298,25 @@ class Spider(BaseSpider):
             return None
 
     def _source_videos(self):
+        """解锁后源列表：文件夹形式，点击进入分类而不是播放"""
         sources = self._load_sources()
         videos = []
         for i, s in enumerate(sources):
             api = s.get("api") or ""
             if self._is_cms(api):
-                kind = "采集"
+                kind = "采集站"
             elif self._is_py(api):
-                kind = "PY"
+                kind = "PY源"
             else:
                 kind = "源"
             videos.append(
                 {
-                    "vod_id": f"{self._token()}|site|{i}",
-                    "vod_name": "🔓" + str(s.get("name") or f"源{i+1}"),
+                    # 用 src，categoryContent 直接当分类打开
+                    "vod_id": f"{self._token()}|src|{i}",
+                    "vod_name": "📂" + str(s.get("name") or f"源{i+1}"),
                     "vod_remarks": kind,
                     "vod_pic": "",
+                    "vod_tag": "folder",  # OK/FongMi：文件夹，点进去进分类
                 }
             )
         return videos
@@ -462,9 +465,10 @@ class Spider(BaseSpider):
                                 videos.append(
                                     {
                                         "vod_id": f"{self._token()}|pycat|{idx}|{quote(cid, safe='')}",
-                                        "vod_name": cname,
+                                        "vod_name": "📂" + cname,
                                         "vod_remarks": "分类",
                                         "vod_pic": "",
+                                        "vod_tag": "folder",
                                     }
                                 )
                         hv = self._call_py(idx, "homeVideoContent")
@@ -556,7 +560,8 @@ class Spider(BaseSpider):
                     }
                 ]
             }
-        if parts[1] == "site" and len(parts) >= 3:
+        # 文件夹被当成播放项时的兜底：仍给出说明（正常应走 category）
+        if parts[1] in ("site", "src") and len(parts) >= 3:
             try:
                 idx = int(parts[2])
             except Exception:
@@ -565,29 +570,18 @@ class Spider(BaseSpider):
             src = sources[idx] if 0 <= idx < len(sources) else {}
             name = src.get("name") or "源"
             api = src.get("api") or ""
-            content = f"源：{name}\nAPI：{api}"
-            if self._is_py(api):
-                hv = self._call_py(idx, "homeVideoContent")
-                if isinstance(hv, dict) and hv.get("list"):
-                    first = hv["list"][0]
-                    fid = str(first.get("vod_id") or "")
-                    if fid:
-                        det = self._call_py(idx, "detailContent", [fid])
-                        if isinstance(det, dict) and det.get("list"):
-                            item = dict(det["list"][0])
-                            item["vod_id"] = f"{self._token()}|py|{idx}|{quote(fid, safe='')}"
-                            item["vod_name"] = name + " · " + str(item.get("vod_name") or "")
-                            item["vod_content"] = content + "\n\n" + str(item.get("vod_content") or "")
-                            return {"list": [item]}
-            # 详情里给出“打开分类”提示；真正浏览靠点列表进 src
             return {
                 "list": [
                     {
-                        "vod_id": f"{self._token()}|src|{idx}",
-                        "vod_name": name,
-                        "vod_content": content + "\n\n请返回列表重新点选，或从解锁列表进入。",
-                        "vod_play_from": "进入",
-                        "vod_play_url": f"分类${self._token()}|src|{idx}",
+                        "vod_id": raw,
+                        "vod_name": "📂" + name,
+                        "vod_content": (
+                            f"这是源入口（文件夹），不是单集播放。\n"
+                            f"API：{api}\n\n"
+                            f"请返回，长按/用文件夹方式进入；或重新从解锁列表点「📂」进入分类。"
+                        ),
+                        "vod_play_from": "提示",
+                        "vod_play_url": "返回$http://127.0.0.1/null",
                     }
                 ]
             }
