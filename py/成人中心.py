@@ -1,9 +1,10 @@
 # coding=utf-8
 # OK影视 / FongMi type=3
-# 成人中心：搜索密码解锁 → 列出成人源（含 PY）→ 直接调用远程 PY 爬虫
+# 成人中心：用「分类筛选」解锁（不要用首页全局搜索）
+# 1. 进入本源 → 点分类「🔒解锁」→ 右上角/筛选 选择密码 → 确定
+# 2. 备选：站内搜索密码（部分壳仍会走全局，不推荐）
 import json
 import sys
-import time
 import hashlib
 import types
 from urllib.parse import quote, unquote
@@ -50,6 +51,7 @@ class Spider(BaseSpider):
         try:
             import requests
             from requests.adapters import HTTPAdapter
+
             self.session = requests.Session()
             self.session.verify = False
             self.session.headers.update(self.headers)
@@ -81,6 +83,7 @@ class Spider(BaseSpider):
                 r = self.session.get(url, timeout=timeout)
                 return r.status_code, r.text, r.content
             import requests
+
             r = requests.get(url, headers=self.headers, timeout=timeout, verify=False)
             return r.status_code, r.text, r.content
         except Exception:
@@ -100,6 +103,35 @@ class Spider(BaseSpider):
 
     def _check_token(self, s):
         return str(s or "").startswith("U") and str(s)[1:] == self.password
+
+    def _parse_extend(self, extend):
+        """兼容 dict / json字符串 / 空"""
+        if extend is None or extend is False:
+            return {}
+        if isinstance(extend, dict):
+            return extend
+        if isinstance(extend, str):
+            t = extend.strip()
+            if not t or t in ("{}", "null", "None"):
+                return {}
+            try:
+                o = json.loads(t)
+                return o if isinstance(o, dict) else {}
+            except Exception:
+                return {}
+        return {}
+
+    def _pwd_from_extend(self, extend, filter=None):
+        ex = self._parse_extend(extend)
+        for k in ("pwd", "password", "pass", "p"):
+            if ex.get(k):
+                return str(ex.get(k)).strip()
+        # 有的壳把筛选放在 filter 参数
+        if isinstance(filter, dict):
+            for k in ("pwd", "password", "pass", "p"):
+                if filter.get(k):
+                    return str(filter.get(k)).strip()
+        return ""
 
     def _is_adult_site(self, s):
         if not isinstance(s, dict):
@@ -122,7 +154,14 @@ class Spider(BaseSpider):
                 name = str(s.get("name") or s.get("key") or f"源{i+1}").strip()
                 if not api:
                     continue
-                out.append({"name": name, "api": api, "type": int(s.get("type") or 3)})
+                out.append(
+                    {
+                        "name": name,
+                        "api": api,
+                        "type": int(s.get("type") or 3),
+                        "ext": s.get("ext") or "",
+                    }
+                )
         if self.sources_url:
             data = self._get_json(self.sources_url)
             sites = data.get("sites") if isinstance(data, dict) else []
@@ -193,7 +232,6 @@ class Spider(BaseSpider):
         return videos, total
 
     def _get_remote_spider(self, api_url, ext=""):
-        """下载并实例化远程 PY 爬虫"""
         key = api_url + "||" + str(ext or "")
         if key in self._spider_cache:
             return self._spider_cache[key]
@@ -201,8 +239,9 @@ class Spider(BaseSpider):
         if code_status != 200 or not code or "class Spider" not in code:
             return None
         try:
-            mod = types.ModuleType("remote_spider_" + hashlib.md5(api_url.encode()).hexdigest()[:10])
-            # 注入常见依赖路径
+            mod = types.ModuleType(
+                "remote_spider_" + hashlib.md5(api_url.encode()).hexdigest()[:10]
+            )
             mod.__dict__["__name__"] = mod.__name__
             exec(compile(code, api_url, "exec"), mod.__dict__)
             cls = getattr(mod, "Spider", None)
@@ -212,8 +251,6 @@ class Spider(BaseSpider):
             try:
                 if hasattr(inst, "init"):
                     inst.init(ext if ext is not None else "")
-                elif hasattr(inst, "homeContent") is False:
-                    pass
             except Exception:
                 try:
                     inst.init("")
@@ -225,7 +262,6 @@ class Spider(BaseSpider):
             return None
 
     def _prefix_list(self, lst, src_idx):
-        """给子爬虫返回的 list 中 vod_id 加前缀，方便回传"""
         out = []
         tok = self._token()
         for it in lst or []:
@@ -261,13 +297,47 @@ class Spider(BaseSpider):
         except Exception:
             return None
 
+    def _source_videos(self):
+        sources = self._load_sources()
+        videos = []
+        for i, s in enumerate(sources):
+            api = s.get("api") or ""
+            if self._is_cms(api):
+                kind = "采集"
+            elif self._is_py(api):
+                kind = "PY"
+            else:
+                kind = "源"
+            videos.append(
+                {
+                    "vod_id": f"{self._token()}|site|{i}",
+                    "vod_name": "🔓" + str(s.get("name") or f"源{i+1}"),
+                    "vod_remarks": kind,
+                    "vod_pic": "",
+                }
+            )
+        return videos
+
     def homeContent(self, filter):
+        # 分类解锁：点「🔒解锁」后在筛选里选密码
+        pwd = self.password
         return {
             "class": [
-                {"type_name": "🔒搜索密码解锁", "type_id": "lock"},
+                {"type_name": "🔒解锁(用筛选选密码)", "type_id": "gate"},
                 {"type_name": "使用说明", "type_id": "help"},
             ],
-            "filters": {},
+            "filters": {
+                "gate": [
+                    {
+                        "key": "pwd",
+                        "name": "密码",
+                        "value": [
+                            {"n": "请选择密码", "v": ""},
+                            {"n": pwd, "v": pwd},
+                        ],
+                    }
+                ]
+            },
             "list": [],
         }
 
@@ -276,9 +346,9 @@ class Spider(BaseSpider):
             "list": [
                 {
                     "vod_id": "tip",
-                    "vod_name": "🔒 请在搜索框输入密码解锁成人源",
+                    "vod_name": "①点分类「解锁」②筛选里选密码③确定",
                     "vod_pic": "",
-                    "vod_remarks": "支持PY源直接进入",
+                    "vod_remarks": "不要用首页全局搜索",
                 }
             ]
         }
@@ -286,28 +356,77 @@ class Spider(BaseSpider):
     def categoryContent(self, tid, pg, filter, extend):
         tid = str(tid or "")
         pg = int(pg or 1)
-        if tid in ("help", "lock"):
+        ex = self._parse_extend(extend)
+        # 有的壳把 extend 当 filter 用
+        pwd = self._pwd_from_extend(extend, filter if isinstance(filter, dict) else None)
+
+        if tid == "help":
             return {
                 "list": [
                     {
-                        "vod_id": "tip2",
-                        "vod_name": "在搜索框输入密码后回车",
-                        "vod_remarks": "默认 888888",
+                        "vod_id": "tip_help1",
+                        "vod_name": "不要用App首页的全局搜索",
+                        "vod_remarks": "会搜全部站点",
                     },
                     {
-                        "vod_id": "tip3",
-                        "vod_name": "解锁后点源名称进入分类",
-                        "vod_remarks": "PY源可直接浏览",
+                        "vod_id": "tip_help2",
+                        "vod_name": "请点分类「🔒解锁」再用筛选选密码",
+                        "vod_remarks": "选完点确定",
+                    },
+                    {
+                        "vod_id": "tip_help3",
+                        "vod_name": "解锁后列表带🔓的是成人源",
+                        "vod_remarks": "点进去可浏览PY",
                     },
                 ],
                 "page": 1,
                 "pagecount": 1,
                 "limit": 20,
-                "total": 2,
+                "total": 3,
             }
+
+        # 解锁分类
+        if tid == "gate":
+            if pwd != self.password:
+                return {
+                    "list": [
+                        {
+                            "vod_id": "need_pwd",
+                            "vod_name": "请在右上角/筛选中选择密码后确定",
+                            "vod_remarks": "未解锁",
+                            "vod_pic": "",
+                        }
+                    ],
+                    "page": 1,
+                    "pagecount": 1,
+                    "limit": 1,
+                    "total": 1,
+                }
+            videos = self._source_videos()
+            if not videos:
+                videos = [
+                    {
+                        "vod_id": "tip",
+                        "vod_name": "已解锁但未拉到源，检查00.json",
+                        "vod_remarks": "空",
+                    }
+                ]
+            # 分页
+            limit = 50
+            total = len(videos)
+            start = (pg - 1) * limit
+            end = start + limit
+            pagecount = max(1, (total + limit - 1) // limit)
+            return {
+                "list": videos[start:end],
+                "page": pg,
+                "pagecount": pagecount,
+                "limit": limit,
+                "total": total,
+            }
+
         parts = tid.split("|")
         if len(parts) >= 2 and self._check_token(parts[0]):
-            # token|src|idx  → 源首页分类列表转成视频 或 调 py homeVideo / category
             if parts[1] == "src" and len(parts) >= 3:
                 try:
                     idx = int(parts[2])
@@ -318,7 +437,6 @@ class Spider(BaseSpider):
                     return {"list": [], "page": 1, "pagecount": 1, "limit": 20, "total": 0}
                 src = sources[idx]
                 api = src.get("api") or ""
-                # CMS
                 if self._is_cms(api):
                     videos, total = self._cms_list(api, pg)
                     limit = 20
@@ -330,9 +448,7 @@ class Spider(BaseSpider):
                         "limit": limit,
                         "total": total or len(videos),
                     }
-                # PY：先取 homeContent 分类，把分类当列表；或 homeVideoContent
                 if self._is_py(api):
-                    # pg==1 时列出分类作为入口；若有 class 则展示 class
                     if pg <= 1:
                         home = self._call_py(idx, "homeContent", False)
                         classes = (home or {}).get("class") or (home or {}).get("class_list") or []
@@ -362,7 +478,6 @@ class Spider(BaseSpider):
                                 "limit": len(videos),
                                 "total": len(videos),
                             }
-                    # 无分类则尝试 categoryContent 默认 tid
                     data = self._call_py(idx, "categoryContent", "0", str(pg), True, {})
                     if not data:
                         data = self._call_py(idx, "categoryContent", "", str(pg), True, {})
@@ -388,7 +503,6 @@ class Spider(BaseSpider):
                         "limit": 1,
                         "total": 1,
                     }
-            # token|pycat|idx|type_id → 调远程 categoryContent
             if parts[1] == "pycat" and len(parts) >= 4:
                 try:
                     idx = int(parts[2])
@@ -406,17 +520,24 @@ class Spider(BaseSpider):
                         "total": int(data.get("total") or len(lst)),
                     }
                 return {"list": [], "page": pg, "pagecount": 1, "limit": 20, "total": 0}
+
         return {"list": [], "page": 1, "pagecount": 1, "limit": 20, "total": 0}
 
     def detailContent(self, array):
         raw = str(array[0] if isinstance(array, list) else array)
-        if raw in ("tip", "tip2", "tip3", "wrong"):
+        if raw in ("tip", "tip_help1", "tip_help2", "tip_help3", "need_pwd", "wrong"):
             return {
                 "list": [
                     {
                         "vod_id": raw,
-                        "vod_name": "请使用搜索框输入密码",
-                        "vod_content": "进入成人中心后，在搜索框输入密码并搜索。",
+                        "vod_name": "操作说明",
+                        "vod_content": (
+                            "1. 进入「🔒成人中心」\n"
+                            "2. 点分类「🔒解锁(用筛选选密码)」\n"
+                            "3. 打开筛选/过滤，选择密码后确定\n"
+                            "4. 出现带🔓的源列表后点进去浏览\n"
+                            "注意：App首页搜索是全局搜索，不要用。"
+                        ),
                         "vod_play_from": "说明",
                         "vod_play_url": "说明$http://127.0.0.1/null",
                     }
@@ -428,14 +549,13 @@ class Spider(BaseSpider):
                 "list": [
                     {
                         "vod_id": "deny",
-                        "vod_name": "未解锁或令牌无效",
-                        "vod_content": "请重新搜索密码解锁",
+                        "vod_name": "未解锁",
+                        "vod_content": "请用分类筛选选择密码解锁",
                         "vod_play_from": "说明",
                         "vod_play_url": "说明$http://127.0.0.1/null",
                     }
                 ]
             }
-        # 源入口：点搜索结果里的源
         if parts[1] == "site" and len(parts) >= 3:
             try:
                 idx = int(parts[2])
@@ -444,13 +564,8 @@ class Spider(BaseSpider):
             sources = self._load_sources()
             src = sources[idx] if 0 <= idx < len(sources) else {}
             name = src.get("name") or "源"
-            # 把「打开」指向分类 tid，部分壳不支持；提供说明 + 假列表提示用户进分类
-            # 更稳妥：detail 里直接拉首页推荐
             api = src.get("api") or ""
-            content = f"源：{name}\nAPI：{api}\n\n请返回后点击源进入分类浏览；或使用下方试看。"
-            play_from = "进入"
-            play_url = f"分类${self._token()}|src|{idx}"
-            # 若是 PY，尝试取一条推荐作详情
+            content = f"源：{name}\nAPI：{api}"
             if self._is_py(api):
                 hv = self._call_py(idx, "homeVideoContent")
                 if isinstance(hv, dict) and hv.get("list"):
@@ -460,29 +575,22 @@ class Spider(BaseSpider):
                         det = self._call_py(idx, "detailContent", [fid])
                         if isinstance(det, dict) and det.get("list"):
                             item = dict(det["list"][0])
-                            # 改写 play id
-                            pf = str(item.get("vod_play_from") or "播放")
-                            pu = str(item.get("vod_play_url") or "")
-                            # 包装播放串
                             item["vod_id"] = f"{self._token()}|py|{idx}|{quote(fid, safe='')}"
                             item["vod_name"] = name + " · " + str(item.get("vod_name") or "")
                             item["vod_content"] = content + "\n\n" + str(item.get("vod_content") or "")
-                            # 播放地址加上 py 前缀标记在 playerContent 解析
-                            item["vod_play_from"] = pf
-                            item["vod_play_url"] = self._wrap_play(idx, pu)
                             return {"list": [item]}
+            # 详情里给出“打开分类”提示；真正浏览靠点列表进 src
             return {
                 "list": [
                     {
                         "vod_id": f"{self._token()}|src|{idx}",
                         "vod_name": name,
-                        "vod_content": content,
-                        "vod_play_from": play_from,
-                        "vod_play_url": play_url,
+                        "vod_content": content + "\n\n请返回列表重新点选，或从解锁列表进入。",
+                        "vod_play_from": "进入",
+                        "vod_play_url": f"分类${self._token()}|src|{idx}",
                     }
                 ]
             }
-        # PY 详情
         if parts[1] == "py" and len(parts) >= 4:
             try:
                 idx = int(parts[2])
@@ -493,10 +601,8 @@ class Spider(BaseSpider):
             if isinstance(det, dict) and det.get("list"):
                 item = dict(det["list"][0])
                 item["vod_id"] = raw
-                item["vod_play_url"] = self._wrap_play(idx, str(item.get("vod_play_url") or ""))
                 return {"list": [item]}
             return {"list": []}
-        # CMS 详情
         if parts[1] == "cms" and len(parts) >= 4:
             api = unquote(parts[2])
             vod_id = parts[3]
@@ -529,7 +635,7 @@ class Spider(BaseSpider):
                     {
                         "vod_id": raw,
                         "vod_name": "源加载失败",
-                        "vod_content": "远程 PY 无法加载，请检查源地址。",
+                        "vod_content": "远程PY无法加载",
                         "vod_play_from": "说明",
                         "vod_play_url": "说明$http://127.0.0.1/null",
                     }
@@ -537,13 +643,8 @@ class Spider(BaseSpider):
             }
         return {"list": []}
 
-    def _wrap_play(self, idx, play_url):
-        """把子源播放串加上索引标记，多线路用 $$$ / # 保持原样，只在每条 url 前加标记不破坏结构。
-        playerContent 收到的是单条 id。
-        """
-        return str(play_url or "")
-
     def searchContent(self, key, quick, pg="1"):
+        # 仍保留：若壳支持站内搜索可解锁；全局搜索时结果带🔓前缀便于识别
         key = str(key or "").strip()
         if not key:
             return {"list": []}
@@ -552,36 +653,19 @@ class Spider(BaseSpider):
                 "list": [
                     {
                         "vod_id": "wrong",
-                        "vod_name": "❌ 密码错误",
-                        "vod_remarks": "请重试",
+                        "vod_name": "❌密码错误或请用分类筛选解锁",
+                        "vod_remarks": "推荐：分类→解锁→筛选选密码",
                         "vod_pic": "",
                     }
                 ]
             }
-        sources = self._load_sources()
-        videos = []
-        for i, s in enumerate(sources):
-            api = s.get("api") or ""
-            if self._is_cms(api):
-                kind = "采集"
-            elif self._is_py(api):
-                kind = "PY"
-            else:
-                kind = "源"
-            videos.append(
-                {
-                    "vod_id": f"{self._token()}|site|{i}",
-                    "vod_name": s.get("name") or f"源{i+1}",
-                    "vod_remarks": kind,
-                    "vod_pic": "",
-                }
-            )
+        videos = self._source_videos()
         if not videos:
             videos = [
                 {
                     "vod_id": "tip",
-                    "vod_name": "已解锁，但未拉到成人源",
-                    "vod_remarks": "检查 sources_url / 00.json",
+                    "vod_name": "已解锁但未拉到源",
+                    "vod_remarks": "检查00.json",
                 }
             ]
         return {
@@ -594,13 +678,8 @@ class Spider(BaseSpider):
 
     def playerContent(self, flag, id, vipFlags):
         url = str(id or "")
-        # 若是 py 详情来的直链
         if url.startswith("http"):
             return {"url": url, "parse": 0, "jx": 0, "header": self.headers}
-        # 尝试：id 可能是  token|py|idx|realId 的播放，需要子爬虫 playerContent
-        # 多数壳会把 vod_play_url 里 $ 后面的部分当 id 传入
-        # 若子源返回的就是 http，上面已处理
-        # 尝试解析包装
         parts = url.split("|")
         if len(parts) >= 4 and self._check_token(parts[0]) and parts[1] == "py":
             try:
@@ -613,7 +692,12 @@ class Spider(BaseSpider):
                 return data
             if real.startswith("http"):
                 return {"url": real, "parse": 0, "jx": 0, "header": self.headers}
-        return {"url": url if url.startswith("http") else "", "parse": 0, "jx": 0, "header": self.headers}
+        return {
+            "url": url if url.startswith("http") else "",
+            "parse": 0,
+            "jx": 0,
+            "header": self.headers,
+        }
 
     def localProxy(self, param):
         return None
