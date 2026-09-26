@@ -96,7 +96,7 @@ def parse_video_cards(document, base_url=BASE_URL):
             "vod_id": vod_id,
             "vod_name": title or vod_id,
             "vod_pic": pic,
-            "vod_remarks": "蝴蝶影视",
+            "vod_remarks": "自建影视",
             "style": {"type": "rect", "ratio": 1.78}
         })
         seen.add(vod_id)
@@ -125,7 +125,7 @@ def extract_media_url(document):
     return ""
 
 
-def parse_detail(document, vod_id, base_url=BASE_URL, tg_group="https://t.me/tvshare23"):
+def parse_detail(document, vod_id, base_url=BASE_URL, tg_group="https://t.me/yingshifx1"):
     title = _text(_first_group(document, r'<h1\b[^>]*class=["\'][^"\']*\bvideo-title\b[^"\']*["\'][^>]*>(.*?)</h1>'))
     number = _text(_first_group(document, r'<span\b[^>]*class=["\'][^"\']*\bjpnum\b[^"\']*["\'][^>]*>(.*?)</span>'))
     tag_block = _first_group(document, r'<span\b[^>]*class=["\'][^"\']*\btag\b[^"\']*["\'][^>]*>(.*?)</span>')
@@ -148,12 +148,12 @@ def parse_detail(document, vod_id, base_url=BASE_URL, tg_group="https://t.me/tvs
         "vod_id": str(vod_id),
         "vod_name": title or number or str(vod_id),
         "vod_pic": _absolute(base_url, poster),
-        "vod_actor": "🦋 TG群: @tvshare23",
-        "vod_director": "🦋 蝴蝶影视",
-        "vod_remarks": "蝴蝶影视",
+        "vod_actor": "🎬 TG群: @yingshifx1",
+        "vod_director": "🎬 自建影视",
+        "vod_remarks": "自建影视",
         "vod_tag": ", ".join(tags),
         "vod_content": content_desc,
-        "vod_play_from": "蝴蝶影视" if media_url else "",
+        "vod_play_from": "自建影视" if media_url else "",
         "vod_play_url": ("正片$%s" % vod_id) if media_url else "",
         "media_url": media_url,
     }
@@ -171,9 +171,9 @@ class Spider(BaseSpider):
     def __init__(self):
         super(Spider, self).__init__()
         self.siteUrl = BASE_URL
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = USER_AGENT
         self.options = {}
 

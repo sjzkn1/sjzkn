@@ -31,9 +31,9 @@ class Spider(SpiderBase):
         self.fallbackHost = "https://www.thisav.my"
         self.baseHost = self.primaryHost
         
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "TG群: @tvshare23"
-        self.brandDirector = "蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "TG群: @yingshifx1"
+        self.brandDirector = "自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
         self.options = {}
 
@@ -122,7 +122,7 @@ class Spider(SpiderBase):
         return True
 
     def getName(self):
-        return "蝴蝶影视·MissAV"
+        return "自建影视·MissAV"
 
     def isVideoFormat(self, url):
         low = (url or "").lower()
@@ -382,7 +382,7 @@ class Spider(SpiderBase):
                 if is_ranking:
                     rank_m = re.search(r'(第\s*\d+\s*名)', block)
                     sub_desc = rank_m.group(1).replace(" ", "") if rank_m else ""
-                    remarks_text = ("蝴蝶影视 · %s" % sub_desc) if sub_desc else "蝴蝶影视"
+                    remarks_text = ("自建影视 · %s" % sub_desc) if sub_desc else "自建影视"
                 else:
                     count_m = re.search(r'(\d+)\s*(?:条影片|條影片|部影片|部)', block)
                     debut_m = re.search(r'(\d{4})\s*(?:出道|年出道)', block)
@@ -392,7 +392,7 @@ class Spider(SpiderBase):
                     if debut_m:
                         meta_arr.append("%s出道" % debut_m.group(1))
                     sub_desc = " · ".join(meta_arr) if meta_arr else ""
-                    remarks_text = ("蝴蝶影视 · %s" % sub_desc) if sub_desc else "蝴蝶影视"
+                    remarks_text = ("自建影视 · %s" % sub_desc) if sub_desc else "自建影视"
 
                 display_name = ("%s\n%s" % (title, sub_desc)) if sub_desc else title
 
@@ -430,7 +430,7 @@ class Spider(SpiderBase):
                     continue
 
                 count_m = re.search(r'(\d+)\s*(?:条影片|條影片|部影片|部)', cell)
-                remarks = ("蝴蝶影视 · %s部" % count_m.group(1)) if count_m else "蝴蝶影视"
+                remarks = ("自建影视 · %s部" % count_m.group(1)) if count_m else "自建影视"
 
                 first_char = title[0].strip().upper()
                 bg_color, fg_color = self.color_palette[idx % len(self.color_palette)]
@@ -513,7 +513,7 @@ class Spider(SpiderBase):
             proxy_pic = "%s@Referer=%s/@User-Agent=%s" % (raw_pic, self.baseHost, quote(self._ua))
 
             dur_m = re.search(r'(\d{1,2}:\d{2}(?::\d{2})?)', ch)
-            dur = ("蝴蝶影视 · %s" % dur_m.group(1)) if dur_m else "蝴蝶影视"
+            dur = ("自建影视 · %s" % dur_m.group(1)) if dur_m else "自建影视"
 
             pack_id = "%s@@%s" % (dvd_id, full_href)
 
@@ -659,7 +659,7 @@ class Spider(SpiderBase):
         actor_text = ", ".join(clean_actresses) if clean_actresses else self.brandActor
 
         desc_m = re.search(r'<meta[^>]+name=["\']description["\'][^>]+content=["\']([^"\']*)["\']', html)
-        desc = desc_m.group(1).strip() if desc_m else "蝴蝶影视高清聚合，全网同步更新。"
+        desc = desc_m.group(1).strip() if desc_m else "自建影视高清聚合，全网同步更新。"
         vod_content = (
             "【🔥 官方交流群: %s】\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
@@ -686,7 +686,7 @@ class Spider(SpiderBase):
                 "vod_pic": pic,
                 "vod_actor": actor_text,
                 "vod_director": self.brandDirector,
-                "vod_remarks": "蝴蝶影视",
+                "vod_remarks": "自建影视",
                 "vod_content": escaped_desc,
                 "vod_play_from": "$$$".join(play_froms) if play_froms else "蝴蝶专线",
                 "vod_play_url": "$$$".join(play_urls) if play_urls else ("超清原画正片$" + cand_urls[0])

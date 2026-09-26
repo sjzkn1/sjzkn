@@ -23,7 +23,7 @@ except ImportError:
         def setCache(self, key, value): return "fail"
         def delCache(self, key): return "fail"
 
-def format_remarks(brand="🦋 蝴蝶影视", meta=""):
+def format_remarks(brand="🎬 自建影视", meta=""):
     clean_meta = str(meta or "").strip()
     clean_meta = re.sub(r"[\r\n\t]+", " ", clean_meta).strip()
     if clean_meta:
@@ -65,9 +65,9 @@ class Spider(SpiderBase):
         super(Spider, self).__init__()
         self.siteUrl = "https://www.njav.com"
         self.entryUrl = "https://www.njav.com/zh"
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
         self.options = {}
 
@@ -99,7 +99,7 @@ class Spider(SpiderBase):
         return True
 
     def getName(self):
-        return "NJAV·蝴蝶影视"
+        return "NJAV·自建影视"
 
     def isVideoFormat(self, url):
         low = (url or "").lower()
@@ -255,7 +255,7 @@ class Spider(SpiderBase):
                 "vod_id": full_href,
                 "vod_name": title,
                 "vod_pic": pic,
-                "vod_remarks": format_remarks("🦋 蝴蝶影视", duration),
+                "vod_remarks": format_remarks("🎬 自建影视", duration),
                 "style": {"type": "rect", "ratio": 1.78}
             })
 
@@ -313,7 +313,7 @@ class Spider(SpiderBase):
                 "vod_id": "folder@@" + full_href,
                 "vod_name": clean_name,
                 "vod_pic": colorful_pic,
-                "vod_remarks": "蝴蝶影视 · %s" % cat_name,
+                "vod_remarks": "自建影视 · %s" % cat_name,
                 "vod_tag": "folder",
                 "style": card_style
             })
@@ -429,7 +429,7 @@ class Spider(SpiderBase):
                 "vod_pic": vod_pic,
                 "vod_actor": self.brandActor,
                 "vod_director": self.brandDirector,
-                "vod_remarks": format_remarks("🦋 蝴蝶影视", duration),
+                "vod_remarks": format_remarks("🎬 自建影视", duration),
                 "vod_content": desc.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"),
                 "vod_play_from": "蝴蝶专线",
                 "vod_play_url": "正片全高清$%s" % vv_url

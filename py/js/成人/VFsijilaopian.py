@@ -25,9 +25,9 @@ class Spider(SpiderBase):
     def __init__(self):
         super(Spider, self).__init__()
         self.siteUrl = "https://vintagepornfun.com"
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 
         self.ctx = ssl.create_default_context()
@@ -243,7 +243,7 @@ class Spider(SpiderBase):
             "• 影片名称: %s\n"
             "• 播放源状态: 已解析出 %d 条真实正片播放线路\n"
             "• 默认线路: d000d.com（已自动置顶为默认首选播放）\n"
-            "• 品牌专区: 蝴蝶影视致力于为您带来原生极速观影体验。"
+            "• 品牌专区: 自建影视致力于为您带来原生极速观影体验。"
         ) % (self.tgGroup, vod_name, len(valid_iframes))
 
         return {

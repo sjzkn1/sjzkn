@@ -3,7 +3,7 @@
 """
 ══════════════════════════════════════════════════════════════════
 tiktvod01.xyz 正式版 (精准中文标题与双轨直出完整版)
-官方交流群：https://t.me/tvshare23
+官方交流群：https://t.me/yingshifx1
 ══════════════════════════════════════════════════════════════════
 """
 
@@ -30,7 +30,7 @@ class Spider(SpiderBase):
     def __init__(self):
         super(Spider, self).__init__()
         self.siteUrl = "https://tiktvod01.xyz"
-        self.tgGroup = "https://t.me/tvshare23"
+        self.tgGroup = "https://t.me/yingshifx1"
 
         self.ctx = ssl.create_default_context()
         self.ctx.check_hostname = False
@@ -296,11 +296,11 @@ class Spider(SpiderBase):
                 "vod_id": vod_url,
                 "vod_name": title,
                 "vod_pic": pic_url,
-                "vod_actor": "🦋 TG群: @tvshare23 (点击【简介】获取链接)",
-                "vod_director": "🦋 蝴蝶影视",
+                "vod_actor": "🎬 TG群: @yingshifx1 (点击【简介】获取链接)",
+                "vod_director": "🎬 自建影视",
                 "vod_remarks": "关注TG不迷路",
                 "vod_content": full_content,
-                "vod_play_from": "🦋 官方TG: @tvshare23",
+                "vod_play_from": "🎬 官方TG: @yingshifx1",
                 "vod_play_url": play_url
             }]
         }

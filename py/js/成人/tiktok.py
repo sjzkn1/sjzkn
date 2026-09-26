@@ -23,7 +23,7 @@ except ImportError:
         def setCache(self, key, value): return "fail"
         def delCache(self, key): return "fail"
 
-def format_remarks(brand="🦋 蝴蝶影视", meta=""):
+def format_remarks(brand="🎬 自建影视", meta=""):
     clean_meta = str(meta or "").strip()
     clean_meta = re.sub(r"[\r\n\t]+", " ", clean_meta).strip()
     if clean_meta:
@@ -42,9 +42,9 @@ class Spider(SpiderBase):
     def __init__(self):
         super(Spider, self).__init__()
         self.siteUrl = "https://porntok.io"
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
         self.options = {}
 
@@ -275,7 +275,7 @@ class Spider(SpiderBase):
                 "vod_id": encoded_id,
                 "vod_name": title,
                 "vod_pic": v_thumb,
-                "vod_remarks": format_remarks("🦋 蝴蝶短视频", tag_display if tag_display else "高清秒开"),
+                "vod_remarks": format_remarks("🎬 蝴蝶短视频", tag_display if tag_display else "高清秒开"),
                 "style": {"type": "rect", "ratio": 0.56}
             })
 
@@ -355,7 +355,7 @@ class Spider(SpiderBase):
                 "vod_pic": clicked_screen,
                 "vod_actor": self.brandActor,
                 "vod_director": self.brandDirector,
-                "vod_remarks": format_remarks("🦋 蝴蝶影视", "R2 直链秒开"),
+                "vod_remarks": format_remarks("🎬 自建影视", "R2 直链秒开"),
                 "vod_content": desc.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"),
                 "vod_play_from": "PornTok 连播专线",
                 "vod_play_url": "#".join(play_entries)

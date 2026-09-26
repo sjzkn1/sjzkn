@@ -2,7 +2,7 @@
 """
 ══════════════════════════════════════════════════════════════════
 Pektino Video Spider for TVBox / 影视仓
-官方交流频道/群组: https://t.me/tvshare23
+官方交流频道/群组: https://t.me/yingshifx1
 ══════════════════════════════════════════════════════════════════
 """
 import re
@@ -23,7 +23,7 @@ class Spider(SpiderBase):
         self.siteUrl = "https://pektino.com"
         self.session = requests.Session()
         self.ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-        self.channel_url = "https://t.me/tvshare23"
+        self.channel_url = "https://t.me/yingshifx1"
         
         # 广告、导流与占位过滤关键词
         self.ad_keywords = [
