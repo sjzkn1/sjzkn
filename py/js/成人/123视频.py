@@ -33,9 +33,9 @@ class Spider(SpiderBase):
         ]
         self.siteUrl = self.defaultDomains[0]
         self.api = self.siteUrl + "/cn/home/web/index.php/vod"
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
         self.options = {}
 
@@ -93,7 +93,7 @@ class Spider(SpiderBase):
         return True
 
     def getName(self):
-        return "蝴蝶影视·123视频"
+        return "自建影视·123视频"
 
     def isVideoFormat(self, url):
         low = (url or "").lower()
@@ -322,7 +322,7 @@ class Spider(SpiderBase):
             "vod_director": self.brandDirector,
             "vod_remarks": remark or "超清直链",
             "vod_content": escaped_desc,
-            "vod_play_from": "🦋蝴蝶极速专线",
+            "vod_play_from": "🎬蝴蝶极速专线",
             "vod_play_url": play_url
         }
         return {"list": [vod]}
@@ -620,7 +620,7 @@ class Spider(SpiderBase):
         return out
 
     def action(self, action):
-        return {"msg": "🦋 蝴蝶影视·123视频运行正常"}
+        return {"msg": "🎬 自建影视·123视频运行正常"}
 
     def liveContent(self):
         return ""
