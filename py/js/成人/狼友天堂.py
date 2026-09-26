@@ -26,9 +26,9 @@ class Spider(SpiderBase):
         super(Spider, self).__init__()
         self.siteHost = "https://yri.lytt6.motorcycles"
         self.entryPrefix = "/cn/home/web/index.php"
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Linux; Android 12; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.134 Mobile Safari/537.36"
 
     def init(self, extend=""):

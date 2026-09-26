@@ -206,9 +206,9 @@ class Spider(SpiderBase):
         self.aesKey = b"NHboMHZerxFQ401E"
         self.aesIv  = b"i7JeCEIMVrj2W9xN"
 
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
 
         self.ctx = ssl.create_default_context()

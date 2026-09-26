@@ -27,9 +27,9 @@ except ImportError:
 class Spider(SpiderBase):
     def __init__(self):
         super(Spider, self).__init__()
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         self.img_key_589 = b"2019ysapp7527"
         
@@ -135,7 +135,7 @@ class Spider(SpiderBase):
         return True
 
     def getName(self):
-        return "蝴蝶影视·九区全功能稳定版"
+        return "自建影视·九区全功能稳定版"
 
     def sync_remote_domain_pools(self):
         try:
@@ -352,7 +352,7 @@ class Spider(SpiderBase):
                     "vod_id": pack_id,
                     "vod_name": title,
                     "vod_pic": proxy_pic,
-                    "vod_remarks": "蝴蝶影视",
+                    "vod_remarks": "自建影视",
                     "style": {"type": "rect", "ratio": 1.78}
                 })
             except Exception:

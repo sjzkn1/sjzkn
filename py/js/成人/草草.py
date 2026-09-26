@@ -33,9 +33,9 @@ class Spider(SpiderBase):
             "https://ccctv1.top"
         ]
         self.siteUrl = self.defaultDomains[0]
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Linux; Android 14; 22127RK46C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
         self.options = {}
 
@@ -101,7 +101,7 @@ class Spider(SpiderBase):
         return True
 
     def getName(self):
-        return "蝴蝶影视·草艹草"
+        return "自建影视·草艹草"
 
     def isVideoFormat(self, url):
         low = (url or "").lower()
@@ -339,7 +339,7 @@ class Spider(SpiderBase):
             "vod_director": self.brandDirector,
             "vod_remarks": "超清直链",
             "vod_content": escaped_desc,
-            "vod_play_from": "🦋蝴蝶极速专线",
+            "vod_play_from": "🎬蝴蝶极速专线",
             "vod_play_url": "正片$" + play_page
         }
         return {"list": [vod]}
@@ -579,7 +579,7 @@ class Spider(SpiderBase):
             return [500, "text/plain", ("localProxy error: %s" % type(e).__name__).encode("utf-8")]
 
     def action(self, action):
-        return {"msg": "🦋 蝴蝶影视·草艹草运行正常"}
+        return {"msg": "🎬 自建影视·草艹草运行正常"}
 
     def liveContent(self):
         return ""

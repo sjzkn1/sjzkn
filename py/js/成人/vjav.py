@@ -37,7 +37,7 @@ def _text(value):
     return html_lib.unescape(re.sub(r"\s+", " ", val)).strip()
 
 
-def _format_remarks(brand="蝴蝶影视", meta=""):
+def _format_remarks(brand="自建影视", meta=""):
     clean_meta = str(meta or "").strip()
     clean_meta = re.sub(r"[\r\n\t]+", " ", clean_meta).strip()
     if clean_meta:
@@ -52,9 +52,9 @@ class Spider(SpiderBase):
         self.baseHost = self.defaultHost
         self.navUrls = ["https://x99dh.cc", "https://x99dh.one"]
         self.targetSiteName = "avjoy"
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
         self.options = {}
 
@@ -85,7 +85,7 @@ class Spider(SpiderBase):
         return True
 
     def getName(self):
-        return "AVJOY·蝴蝶影视"
+        return "AVJOY·自建影视"
 
     def isVideoFormat(self, url):
         low = (url or "").lower()
@@ -334,7 +334,7 @@ class Spider(SpiderBase):
                 "vod_id": "folder@@" + clean_route,
                 "vod_name": title,
                 "vod_pic": pic,
-                "vod_remarks": "蝴蝶影视 · %s部" % count if count else "蝴蝶影视",
+                "vod_remarks": "自建影视 · %s部" % count if count else "自建影视",
                 "vod_tag": "folder",
                 "style": {"type": "rect", "ratio": 1.78}
             })
@@ -387,7 +387,7 @@ class Spider(SpiderBase):
                 "vod_id": str(vid),
                 "vod_name": title,
                 "vod_pic": pic,
-                "vod_remarks": _format_remarks("蝴蝶影视", duration),
+                "vod_remarks": _format_remarks("自建影视", duration),
                 "style": {"type": "rect", "ratio": 1.78}
             })
             seen_ids.add(vid)
@@ -533,13 +533,13 @@ class Spider(SpiderBase):
         duration = dur_m.group(1) if dur_m else ""
 
         if is_missing:
-            play_from = "蝴蝶影视"
+            play_from = "自建影视"
             play_url = "⚠️ 源站该视频已下架或失效$missing"
             tip_str = "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n【系统提醒】: 源站物理文件已删除或下架（Video Missing）"
         else:
             media_urls = re.findall(r'["\'](https?://[^"\']+\.(?:m3u8|mp4)[^"\']*)["\']', html)
             valid_media = [u for u in media_urls if not any(ext in u.lower() for ext in (".jpg", ".png", ".webp", ".gif"))]
-            play_from = "蝴蝶影视"
+            play_from = "自建影视"
             if valid_media:
                 play_url = "正片$%s" % valid_media[0]
             else:
@@ -561,7 +561,7 @@ class Spider(SpiderBase):
             "vod_pic": poster,
             "vod_actor": self.brandActor,
             "vod_director": self.brandDirector,
-            "vod_remarks": _format_remarks("蝴蝶影视", duration),
+            "vod_remarks": _format_remarks("自建影视", duration),
             "vod_content": content_desc,
             "vod_play_from": play_from,
             "vod_play_url": play_url

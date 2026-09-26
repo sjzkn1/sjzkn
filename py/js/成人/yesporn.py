@@ -31,9 +31,9 @@ class Spider(SpiderBase):
         self.siteUrl = self.defaultHost
         self.baseHost = self.defaultHost
         self.siteName = "YesPorn"
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
         self.options = {}
 
@@ -326,7 +326,7 @@ class Spider(SpiderBase):
         vod_pic = pic_m.group(1).strip() if pic_m else ""
 
         intro_desc = (
-            "【🦋 官方交流群: %s】\n"
+            "【🎬 官方交流群: %s】\n"
             "【当前发布域名: %s】\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
             "温馨提示：若播放卡顿或加载较慢，请尝试切换代理节点。\n"

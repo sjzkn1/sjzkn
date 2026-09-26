@@ -28,9 +28,9 @@ class Spider(SpiderBase):
     def __init__(self):
         super(Spider, self).__init__()
         self.siteUrl = "https://www.xvideos.com"
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
         self.options = {}
 
@@ -55,7 +55,7 @@ class Spider(SpiderBase):
         return True
 
     def getName(self):
-        return "XVideos·蝴蝶影视"
+        return "XVideos·自建影视"
 
     def isVideoFormat(self, url):
         low = (url or "").lower()
@@ -349,7 +349,7 @@ class Spider(SpiderBase):
             if clean_txt:
                 return clean_txt
 
-        return "蝴蝶影视"
+        return "自建影视"
 
     def _parse_video_cards(self, content_str):
         vod_list = []
@@ -371,7 +371,7 @@ class Spider(SpiderBase):
                             "vod_id": v_id,
                             "vod_name": html_lib.unescape(v_name),
                             "vod_pic": v_pic if v_pic else self._get_color_block_pic(v_name),
-                            "vod_remarks": v_dur if v_dur else "蝴蝶影视",
+                            "vod_remarks": v_dur if v_dur else "自建影视",
                             "style": {"type": "rect", "ratio": 1.78}
                         })
                     return vod_list
@@ -422,7 +422,7 @@ class Spider(SpiderBase):
                 duration = dur_m.group(1).strip()
 
             quality = "1080P" if ("video-hd-mark" in chunk or "HD" in chunk) else ""
-            remarks = ("%s | %s" % (duration, quality)).strip(" | ") if duration else "蝴蝶影视"
+            remarks = ("%s | %s" % (duration, quality)).strip(" | ") if duration else "自建影视"
 
             vod_list.append({
                 "vod_id": v_url,
@@ -611,7 +611,7 @@ class Spider(SpiderBase):
                             "vod_id": c_url,
                             "vod_name": html_lib.unescape(full_display_name),
                             "vod_pic": pic if pic else self._get_color_block_pic(base_name),
-                            "vod_remarks": dur_m.group(1).strip() if dur_m else "蝴蝶影视",
+                            "vod_remarks": dur_m.group(1).strip() if dur_m else "自建影视",
                             "style": {"type": "rect", "ratio": 1.78}
                         })
                     else:
@@ -693,7 +693,7 @@ class Spider(SpiderBase):
             "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
             "• 视频标题: %s\n"
             "• 播放协议: 纯直链原生交付 (HLS/MP4)\n"
-            "• 解析状态: 蝴蝶影视专属通道"
+            "• 解析状态: 自建影视专属通道"
         ) % (self.tgGroup, vod_name)
 
         return {
@@ -703,7 +703,7 @@ class Spider(SpiderBase):
                 "vod_pic": vod_pic if vod_pic else self._get_color_block_pic(vod_name),
                 "vod_actor": self.brandActor,
                 "vod_director": self.brandDirector,
-                "vod_remarks": "蝴蝶影视",
+                "vod_remarks": "自建影视",
                 "vod_content": full_desc.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"),
                 "vod_play_from": "XVideos专线",
                 "vod_play_url": "#".join(play_lines)

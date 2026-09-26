@@ -30,7 +30,7 @@ class Spider(SpiderBase):
         super(Spider, self).__init__()
         self.siteUrl = "https://xsz-shared-proxy.97471201.workers.dev"
         self.rawSite = "https://tw.xszav2.com"
-        self.tgGroup = "https://t.me/tvshare23"
+        self.tgGroup = "https://t.me/yingshifx1"
 
         self.ctx = ssl.create_default_context()
         self.ctx.check_hostname = False
@@ -215,8 +215,8 @@ class Spider(SpiderBase):
                 "vod_id": video_url,
                 "vod_name": title,
                 "vod_pic": pic,
-                "vod_actor": "🦋 TG群: @tvshare23",
-                "vod_director": "🦋 蝴蝶影视",
+                "vod_actor": "🎬 TG群: @yingshifx1",
+                "vod_director": "🎬 自建影视",
                 "vod_remarks": "直连播放",
                 "vod_content": brand_content,
                 "vod_play_from": "XSZAV-Direct",
