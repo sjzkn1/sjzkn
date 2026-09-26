@@ -29,9 +29,9 @@ class Spider(SpiderBase):
         self.defaultHost = "https://dage.one"
         self.baseHost = self.defaultHost
         self.navUrls = ["https://x99dh.cc", "https://x99dh.one"]
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
         self.options = {}
 
@@ -320,7 +320,7 @@ class Spider(SpiderBase):
                     title = it.get("title", "")
                     pic = it.get("img", "")
                     duration = it.get("duration", "")
-                    remarks = "蝴蝶影视" + (" " + duration if duration else "")
+                    remarks = "自建影视" + (" " + duration if duration else "")
                     if v_id and title:
                         v_list.append({
                             "vod_id": v_id,
@@ -367,7 +367,7 @@ class Spider(SpiderBase):
             title = it.get("title", "")
             pic = it.get("img", "")
             duration = it.get("duration", "")
-            remarks = "蝴蝶影视" + (" " + duration if duration else "")
+            remarks = "自建影视" + (" " + duration if duration else "")
             if v_id and title:
                 vod_list.append({
                     "vod_id": v_id,
@@ -433,7 +433,7 @@ class Spider(SpiderBase):
                 "vod_pic": pic,
                 "vod_actor": self.brandActor,
                 "vod_director": self.brandDirector,
-                "vod_remarks": "蝴蝶影视",
+                "vod_remarks": "自建影视",
                 "vod_content": full_desc.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"),
                 "vod_play_from": "蝴蝶专线",
                 "vod_play_url": "正片$%s" % play_url
@@ -470,7 +470,7 @@ class Spider(SpiderBase):
                         v_id = str(it.get("vod_id") or "")
                         pic = it.get("img", "")
                         duration = it.get("duration", "")
-                        remarks = "蝴蝶影视" + (" " + duration if duration else "")
+                        remarks = "自建影视" + (" " + duration if duration else "")
                         v_list.append({
                             "vod_id": v_id,
                             "vod_name": title,

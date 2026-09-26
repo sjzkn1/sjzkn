@@ -29,9 +29,9 @@ class Spider(SpiderBase):
         self.domains = ["https://hohoj.tv", "https://hohoj.cc", "https://hohoj.net"]
         self.siteUrl = self.domains[0]
         
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
         self.options = {}
 
@@ -63,7 +63,7 @@ class Spider(SpiderBase):
         return True
 
     def getName(self):
-        return "🦋 蝴蝶影视·HoHoJ多域漂移版"
+        return "🎬 自建影视·HoHoJ多域漂移版"
 
     def isVideoFormat(self, url):
         low = (url or "").lower()
@@ -276,7 +276,7 @@ class Spider(SpiderBase):
         full_desc = (
             "【🔥 官方交流群: %s】\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-            "• 本资源由 蝴蝶影视 独家提供解析，支持全网高清流畅播放。\n"
+            "• 本资源由 自建影视 独家提供解析，支持全网高清流畅播放。\n"
             "• 欢迎加入 TG 交流群获取更多优质资源与最新电视盒子应用！"
         ) % self.tgGroup
 
@@ -289,7 +289,7 @@ class Spider(SpiderBase):
                 "vod_director": self.brandDirector,
                 "vod_remarks": "高清正片",
                 "vod_content": full_desc,
-                "vod_play_from": "蝴蝶影视",
+                "vod_play_from": "自建影视",
                 "vod_play_url": "正片播放$%s" % real_play_url
             }]
         }

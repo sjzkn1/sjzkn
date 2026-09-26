@@ -176,9 +176,9 @@ class Spider(SpiderBase):
         super(Spider, self).__init__(*args, **kwargs)
         self.t4_api = kwargs.get("t4_api", "")
         self.siteUrl = self.DOMAIN_POOL[0]
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (iPhone; CPU iPhone OS 16_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Mobile/15E148 Safari/604.1"
         self.options = {}
 

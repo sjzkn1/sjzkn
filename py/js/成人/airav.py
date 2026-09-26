@@ -28,9 +28,9 @@ class Spider(SpiderBase):
     def __init__(self):
         super(Spider, self).__init__()
         self.siteUrl = "https://airavingg6.work"
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
         self.options = {}
 
@@ -248,7 +248,7 @@ class Spider(SpiderBase):
                 name = clean_lines[0] if clean_lines else hid
 
             m_time = re.search(r'class=["\'][^"\']*(?:duration|time)[^"\']*["\'][^>]*>([^<]+)<', card_html)
-            remarks = m_time.group(1).strip() if m_time else "蝴蝶影视"
+            remarks = m_time.group(1).strip() if m_time else "自建影视"
 
             vod_list.append({
                 "vod_id": hid,
@@ -323,7 +323,7 @@ class Spider(SpiderBase):
                 name = m_name.group(1).strip() if m_name else "分类"
 
                 m_count = re.search(r'<p>([^<]+)</p>', item_html)
-                count_str = m_count.group(1).strip() if m_count else "蝴蝶影视"
+                count_str = m_count.group(1).strip() if m_count else "自建影视"
 
                 folder_list.append({
                     "vod_id": packed_id,
@@ -394,7 +394,7 @@ class Spider(SpiderBase):
                     "vod_id": packed_id,
                     "vod_name": name,
                     "vod_pic": final_pic,
-                    "vod_remarks": "蝴蝶影视",
+                    "vod_remarks": "自建影视",
                     "vod_tag": "folder",
                     "style": {"type": "oval", "ratio": 1.0}
                 })
@@ -516,7 +516,7 @@ class Spider(SpiderBase):
                 "vod_pic": cover,
                 "vod_actor": self.brandActor,
                 "vod_director": self.brandDirector,
-                "vod_remarks": "蝴蝶影视",
+                "vod_remarks": "自建影视",
                 "vod_content": full_desc,
                 "vod_play_from": "AirAV在线",
                 "vod_play_url": play_route

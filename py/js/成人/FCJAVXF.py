@@ -18,9 +18,9 @@ class Spider(BaseSpider):
         super(Spider, self).__init__()
         self.extend = ""
         self.host = "https://fcjav.com"
-        self.tgGroup = "https://t.me/tvshare23"
-        self.vod_actor = "🦋 TG群: @tvshare23"
-        self.vod_director = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.vod_actor = "🎬 TG群: @yingshifx1"
+        self.vod_director = "🎬 自建影视"
         
         # 修正分类 type_id 路径，确保与站方真实伪静态/参数路由严格一致
         self.classes = [

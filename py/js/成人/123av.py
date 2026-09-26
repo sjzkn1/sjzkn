@@ -30,9 +30,9 @@ class Spider(SpiderBase):
         super(Spider, self).__init__()
         self.siteUrl = "https://123av.com/cn"
         self.baseHost = "https://123av.com"
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
         self.options = {}
 
@@ -70,7 +70,7 @@ class Spider(SpiderBase):
         return True
 
     def getName(self):
-        return "123AV·蝴蝶影视"
+        return "123AV·自建影视"
 
     def isVideoFormat(self, url):
         low = (url or "").lower()
@@ -534,13 +534,13 @@ class Spider(SpiderBase):
                 v_pic = pic_m.group(1).strip() if pic_m else ""
 
                 dur_m = re.search(r'class="card__dur">([\s\S]*?)</span>', chunk, re.I)
-                v_dur = dur_m.group(1).strip() if dur_m else "蝴蝶影视"
+                v_dur = dur_m.group(1).strip() if dur_m else "自建影视"
 
                 vod_list.append({
                     "vod_id": v_id,
                     "vod_name": v_name,
                     "vod_pic": v_pic,
-                    "vod_remarks": v_dur if v_dur != "0:00" else "蝴蝶影视",
+                    "vod_remarks": v_dur if v_dur != "0:00" else "自建影视",
                     "style": {"type": "rect", "ratio": 1.78}
                 })
 
@@ -598,7 +598,7 @@ class Spider(SpiderBase):
         full_desc = (
             "【🔥 官方交流群: %s】\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-            "蝴蝶影视全能力极速引擎已接入！本片支持多选集超清秒播。"
+            "自建影视全能力极速引擎已接入！本片支持多选集超清秒播。"
         ) % self.tgGroup
 
         return {
@@ -608,7 +608,7 @@ class Spider(SpiderBase):
                 "vod_pic": vod_pic,
                 "vod_actor": self.brandActor,
                 "vod_director": self.brandDirector,
-                "vod_remarks": "蝴蝶影视",
+                "vod_remarks": "自建影视",
                 "vod_content": full_desc,
                 "vod_play_from": "蝴蝶专线",
                 "vod_play_url": play_url_str
@@ -702,13 +702,13 @@ class Spider(SpiderBase):
             v_pic = pic_m.group(1).strip() if pic_m else ""
 
             dur_m = re.search(r'class="card__dur">([\s\S]*?)</span>', chunk, re.I)
-            v_dur = dur_m.group(1).strip() if dur_m else "蝴蝶影视"
+            v_dur = dur_m.group(1).strip() if dur_m else "自建影视"
 
             vod_list.append({
                 "vod_id": v_id,
                 "vod_name": v_name,
                 "vod_pic": v_pic,
-                "vod_remarks": v_dur if v_dur != "0:00" else "蝴蝶影视",
+                "vod_remarks": v_dur if v_dur != "0:00" else "自建影视",
                 "style": {"type": "rect", "ratio": 1.78}
             })
 

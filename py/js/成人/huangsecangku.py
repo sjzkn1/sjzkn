@@ -38,7 +38,7 @@ def clean_html_text(raw_html):
     return re.sub(r"[\r\n\t\s]+", " ", txt).strip()
 
 
-def format_remarks(brand="蝴蝶影视", meta=""):
+def format_remarks(brand="自建影视", meta=""):
     clean_meta = str(meta or "").strip()
     clean_meta = re.sub(r"[\r\n\t]+", " ", clean_meta).strip()
     if clean_meta:
@@ -55,9 +55,9 @@ class Spider(SpiderBase):
         self.baseHost = self.defaultHost
         self.navUrls = ["https://x99dh.cc", "https://x99dh.one"]
         self.targetSiteNames = ["黄色仓库", "hsck", "69ck"]
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
         self.options = {}
 
@@ -115,7 +115,7 @@ class Spider(SpiderBase):
         return True
 
     def getName(self):
-        return "黄色仓库·蝴蝶影视"
+        return "黄色仓库·自建影视"
 
     def isVideoFormat(self, url):
         low = (url or "").lower()

@@ -101,9 +101,9 @@ class Spider(SpiderBase):
         self._host_idx = 0
         self.baseHost = self.hosts[0]
         self.staticHost = "https://static.worldstatic.com"
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
         self.options = {}
 
@@ -347,7 +347,7 @@ class Spider(SpiderBase):
                 "vod_id": cid,
                 "vod_name": m.get("title") or cid.upper(),
                 "vod_pic": self._format_poster(m.get("localImg") or m.get("img")),
-                "vod_remarks": "蝴蝶影视 | %s" % dur if dur else "蝴蝶影视",
+                "vod_remarks": "自建影视 | %s" % dur if dur else "自建影视",
                 "style": {"type": "rect", "ratio": 1.42}
             })
         return {"list": v_list}
@@ -384,7 +384,7 @@ class Spider(SpiderBase):
                         continue
                     count = s.get("movieCount") or s.get("movie_count") or ""
                     display_name = "%s (%s部)" % (base_name, count) if count else base_name
-                    remarks = "蝴蝶影视 | %s部" % count if count else "蝴蝶影视"
+                    remarks = "自建影视 | %s部" % count if count else "自建影视"
                     
                     raw_avatar = s.get("localAvatar") or s.get("avatar") or s.get("localImg") or s.get("img")
                     avatar = self._format_poster(raw_avatar) if raw_avatar else generate_color_card(base_name)
@@ -417,7 +417,7 @@ class Spider(SpiderBase):
                     g_id = str(g.get("id", ""))
                     name = g.get("name") or g.get("originalName", "")
                     count = g.get("movieCount", "")
-                    remarks = "蝴蝶影视 | %s部" % count if count else "蝴蝶影视"
+                    remarks = "自建影视 | %s部" % count if count else "自建影视"
                     v_list.append({
                         "vod_id": "subfolder@@genre@@%s@@sortBy=latest@@subtitles=@@resolution=@@name=%s" % (g_id, quote(name)),
                         "vod_name": name,
@@ -438,7 +438,7 @@ class Spider(SpiderBase):
                     st_id = str(st.get("id", ""))
                     name = st.get("name", "")
                     count = st.get("movieCount") or st.get("movie_count") or ""
-                    remarks = "蝴蝶影视 | %s部" % count if count else "蝴蝶影视"
+                    remarks = "自建影视 | %s部" % count if count else "自建影视"
                     v_list.append({
                         "vod_id": "subfolder@@studio@@%s@@sortBy=latest@@subtitles=@@resolution=@@name=%s" % (st_id, quote(name)),
                         "vod_name": name,
@@ -458,7 +458,7 @@ class Spider(SpiderBase):
                 for cd in codes:
                     cd_code = str(cd.get("code") or cd.get("name", "")).strip().upper()
                     count = cd.get("movieCount") or cd.get("movie_count") or ""
-                    remarks = "蝴蝶影视 | %s部" % count if count else "蝴蝶影视"
+                    remarks = "自建影视 | %s部" % count if count else "自建影视"
                     v_list.append({
                         "vod_id": "subfolder@@code@@%s@@sortBy=latest@@subtitles=@@resolution=@@name=%s" % (cd_code, quote(cd_code)),
                         "vod_name": cd_code,
@@ -575,7 +575,7 @@ class Spider(SpiderBase):
                     "vod_id": cid,
                     "vod_name": m.get("title") or cid.upper(),
                     "vod_pic": self._format_poster(m.get("localImg") or m.get("img")),
-                    "vod_remarks": "蝴蝶影视 | %s" % dur if dur else "蝴蝶影视",
+                    "vod_remarks": "自建影视 | %s" % dur if dur else "自建影视",
                     "style": {"type": "rect", "ratio": 1.42}
                 })
 
@@ -619,7 +619,7 @@ class Spider(SpiderBase):
                 "vod_id": cid,
                 "vod_name": m.get("title") or cid.upper(),
                 "vod_pic": self._format_poster(m.get("localImg") or m.get("img")),
-                "vod_remarks": "蝴蝶影视 | %s" % dur if dur else "蝴蝶影视",
+                "vod_remarks": "自建影视 | %s" % dur if dur else "自建影视",
                 "style": {"type": "rect", "ratio": 1.42}
             })
 
@@ -654,7 +654,7 @@ class Spider(SpiderBase):
         type_str = " / ".join(genre_names) if genre_names else "情色"
 
         dur_str = format_seconds(data.get("videoLength", 0))
-        remarks = "蝴蝶影视 | %s" % dur_str if dur_str else "蝴蝶影视"
+        remarks = "自建影视 | %s" % dur_str if dur_str else "自建影视"
 
         desc = data.get("description") or title
         full_content = (
@@ -709,7 +709,7 @@ class Spider(SpiderBase):
             "vod_actor": actor_str,
             "vod_director": self.brandDirector,
             "vod_content": full_content.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"),
-            "vod_play_from": "蝴蝶影视专线",
+            "vod_play_from": "自建影视专线",
             "vod_play_url": play_url_str
         }
 
@@ -747,7 +747,7 @@ class Spider(SpiderBase):
                 "vod_id": cid,
                 "vod_name": m.get("title") or cid.upper(),
                 "vod_pic": self._format_poster(m.get("localImg") or m.get("img")),
-                "vod_remarks": "蝴蝶影视 | %s" % dur if dur else "蝴蝶影视",
+                "vod_remarks": "自建影视 | %s" % dur if dur else "自建影视",
                 "style": {"type": "rect", "ratio": 1.42}
             })
 

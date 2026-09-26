@@ -32,9 +32,9 @@ class Spider(SpiderBase):
         self.currentDomain = self.domains[0]
 
         # 品牌版权规范
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
         # 固化静态分类矩阵（首页零网络）
@@ -239,7 +239,7 @@ class Spider(SpiderBase):
             "list": out_list
         }
 
-    # 3. 详情页：解出直链并下沉子流，装配蝴蝶影视标准简介
+    # 3. 详情页：解出直链并下沉子流，装配自建影视标准简介
     def detailContent(self, ids):
         raw_id = ids[0] if isinstance(ids, (list, tuple)) else str(ids)
         target_path = ""

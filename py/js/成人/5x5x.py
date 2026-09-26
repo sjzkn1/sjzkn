@@ -38,9 +38,9 @@ class Spider(SpiderBase):
             "https://uqhf6f3.vip"
         ]
         self.siteUrl = self.defaultDomains[0]
-        self.tgGroup = "https://t.me/tvshare23"
-        self.brandActor = "🦋 TG群: @tvshare23"
-        self.brandDirector = "🦋 蝴蝶影视"
+        self.tgGroup = "https://t.me/yingshifx1"
+        self.brandActor = "🎬 TG群: @yingshifx1"
+        self.brandDirector = "🎬 自建影视"
         self._ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
         self.options = {}
 
@@ -84,7 +84,7 @@ class Spider(SpiderBase):
         return True
 
     def getName(self):
-        return "蝴蝶影视·5x5x影院"
+        return "自建影视·5x5x影院"
 
     def isVideoFormat(self, url):
         low = (url or "").lower()
@@ -323,7 +323,7 @@ class Spider(SpiderBase):
             "• 影片名称: %s" % vod_name,
             "• 当前活跃节点: %s" % self.siteUrl,
             "• 播放模式: 纯直链零嗅探秒播",
-            "• 蝴蝶影视已启用动态域名漂移防护机制。"
+            "• 自建影视已启用动态域名漂移防护机制。"
         ]
         escaped_desc = "\n".join(desc_lines).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
@@ -336,7 +336,7 @@ class Spider(SpiderBase):
                 "vod_director": self.brandDirector,
                 "vod_remarks": "1080P直链",
                 "vod_content": escaped_desc,
-                "vod_play_from": "🦋蝴蝶极速专线",
+                "vod_play_from": "🎬蝴蝶极速专线",
                 "vod_play_url": "#".join(play_entries)
             }]
         }
@@ -412,7 +412,7 @@ class Spider(SpiderBase):
 
     def action(self, action):
         if action == "toast":
-            return {"msg": "🦋 蝴蝶影视正在为您极速解析"}
+            return {"msg": "🎬 自建影视正在为您极速解析"}
         return {"msg": "ok"}
 
     def liveContent(self):
